@@ -1,0 +1,353 @@
+---
+title: "Ecommerce 2023"
+
+output: 
+  flexdashboard::flex_dashboard:
+    orientation: rows
+    theme: flatly
+---
+  
+```{r setup, include=FALSE}
+#-----------------------------------------------#
+#------------------ Instalar librerías ---------#
+#-----------------------------------------------#
+#install.packages("readr")
+#install.packages("plyr")
+#install.packages("dplyr")
+#install.packages("moments")
+#install.packages("ggplot2")
+#install.packages("plotly")
+#install.packages("hrbrthemes")
+#install.packages("flexdashboard")
+#install.packages("GGally")
+
+library(readr)
+library(plyr)
+library(dplyr)
+library(ggplot2)
+library(plotly)
+library(moments)
+library(hrbrthemes)
+library(flexdashboard)
+library(GGally)
+#----------------------------------------------------------------------------
+#Importar datos
+
+ecommerce = read_delim("Ecommerce01.csv")
+#-----------------------------------------------------------------------------
+#Preparación de datos
+
+#Dataframe para grafica violin
+
+#Nombres de las columnas
+colnames(ecommerce)
+
+#Valores de las columnas
+Column_sesion <- ecommerce$min_promedio_sesion
+Column_app <- ecommerce$min_en_app
+Column_web <- ecommerce$min_en_web
+
+#df sesion
+df_sesion <- data.frame ('categoria_sesion' = c('min_promedio_sesion'),
+                         'valores_sesion' = c(Column_sesion))
+ 
+#df app
+df_app <- data.frame ('categoria_sesion' = c('min_en_app'),
+                      'valores_sesion' = c(Column_app))
+ 
+#df web
+df_web <- data.frame ('categoria_sesion' = c('min_en_web'),
+                      'valores_sesion' = c(Column_web))
+#Unir data frames
+
+df <- bind_rows(df_sesion,df_app)
+df_violin <- bind_rows(df,df_web)
+
+#Valores de Columna "categoria_sesion" de caracter a factor
+
+df_violin$categoria_sesion <- as.factor(df_violin$categoria_sesion)
+
+#se agrupa por categoria_sesion y se calcula la mediana de valores_sesion
+
+orden <- aggregate(valores_sesion ~ categoria_sesion, df_violin, median)
+
+#ordenar por la mediana calculada de cada grupo en orden ascendente, 
+#si se quisiere en orden descendente: orden[-order(orden$y),]
+
+orden <- orden[order(orden$valores_sesion),]
+
+#reordenar el factor por el orden deseado
+
+df_violin$categoria_sesion <- factor(df_violin$categoria_sesion, 
+                                     levels = orden$categoria_sesion)
+
+
+#Cambiar el nombre de las categorias 
+
+df_violin$categoria_sesion <- revalue(df_violin$categoria_sesion, 
+                                      c("min_en_app" = "App",
+                                        "min_promedio_sesion"= 'Sitio en general',
+                                        "min_en_web" ="Website"))
+
+levels(df_violin$categoria_sesion)
+
+#--Datos para la correlación--
+
+#seleccionar columnas de dataframe
+
+ecommerce2 <- select(ecommerce, -Id_cliente)
+
+#Estandarizar datos
+
+ecommerce3 <- scale(ecommerce2, center = TRUE, scale = TRUE)
+
+#Volver matriz dataframe 
+
+ecommerce3 <- as.data.frame(ecommerce3)
+
+#Renombrar columnas
+
+ecommerce3 <- dplyr::rename(ecommerce3, "Duración en sitio" = "min_promedio_sesion",
+                                       "Duración en App"  =  "min_en_app", 
+                                       "Duración en Website"  = "min_en_web",
+                                       "Años de membresía" = "anos_miembro",
+                                      "Valor compras" = "valor_compras_anuales_cop"
+                     )
+
+#--Datos para estimadores--
+
+#Variables cuantitativas
+
+var_cuantitativas <- ecommerce[c(2:6)]
+
+#Esandarizar variables
+
+var_cuantitativas <- scale(var_cuantitativas, center = TRUE, scale = TRUE)
+
+#Volver matriz dataframe 
+
+var_cuantitativas <- as.data.frame(var_cuantitativas)
+
+```
+
+<style type="text/css">
+.value-box .value {
+    color: black;
+}
+.value-box .value {
+    font-size: 30px;
+}
+.value-box .caption {
+  font-size: 13px;
+  color: black;
+}
+.value-box .icon i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+</style>
+
+
+Navegación|Fidelización|Consumo  
+=====================================
+
+Row {data-height=60}
+-------------------------------------
+
+### Duración media de la sesión
+
+```{r}
+valueBox('33 min', color='#eaeded', icon = "fa-clock")
+```
+
+### Duración media de la sesión en la website
+
+```{r}
+valueBox('37 min', color='#eaeded', icon = "fa-clock")
+```
+
+### Duración media de la sesión en la App
+```{r}
+valueBox('12 min', color='#eaeded', icon = "fa-clock")
+```
+
+### Años promedio con la membresía
+```{r}
+valueBox('3.5 años', color='#eaeded', icon = "fa-address-card")
+
+```
+
+### Promedio compras año - COP
+
+```{r}
+valueBox('1.997.256 ± 317.259', color='#eaeded', icon = "fa-dollar-sign")
+
+```
+
+Row {data-height=200}
+-------------------------------------
+### Interpretación
+
+La distribución de la duración de sesión (sea en el e-commerce en general,
+la página web o en la App), los años de membresía y el valor de las compras del año 
+es normal (gráfico 1, 2 y 3). Es decir, hay una concentración de los clientes hacia 
+el valor promedio del tiempo de navegación, los años de membresía y el valor de sus 
+compras.
+
+Row {data-height=740}
+-------------------------------------
+### Gráfico 1. Distribución de la duración de navegación
+
+```{r} 
+plot_sesion <- df_violin %>%
+                  plot_ly()%>%
+                      add_trace( x = ~categoria_sesion, y = ~valores_sesion,
+                                split = ~categoria_sesion, type = 'violin',
+                                box = list( visible = T),
+                                meanline = list(visible = T),
+                                color = ~categoria_sesion,
+                                colors= "Spectral",
+                                line = list(color = "black", width = 1)
+                                            
+                                )%>%
+                  
+                      layout( plot_bgcolor='rgb(229, 231, 233)',
+                              xaxis = list( title = "Sitio de navegación" ),
+                              yaxis = list(title = 'Minutos', 
+                                           zerolinecolor = '#ffff',
+                                           zerolinewidth = 2,
+                                            gridcolor = 'ffff'),
+                              showlegend = F)
+
+plot_sesion
+```
+
+### Gráfico 2. Distribución de los años de membresía
+
+```{r} 
+plot_membresia<- ecommerce %>% 
+                       plot_ly()%>%
+                              add_trace(y = ~anos_miembro, type = 'violin', 
+                                        box = list(visible = T ),
+                                        meanline = list(visible = T),
+                                        x0 = 'Años de membresía',
+                                        color = I('gold'),
+                                        line = list(color = "black", width = 1),
+                                        marker = list(color = "yellow",
+                                        line = list(color = "black",
+                                        width = 1))   
+                               ) %>%
+   
+                             layout( plot_bgcolor='rgb(229, 231, 233)',
+                                     yaxis = list(title = '', 
+                                                  zerolinecolor = '#ffff',
+                                                  zerolinewidth = 2,
+                                                  gridcolor = 'ffff'))
+
+plot_membresia
+```
+
+### Gráfico 3. Distribución de las compras del año
+
+```{r} 
+plot_compras <- ecommerce %>% 
+                      plot_ly()%>%
+                            add_trace(y = ~valor_compras_anuales_cop, type = 'violin', 
+                            box = list(visible = T ),
+                            meanline = list(visible = T),
+                            x0 = 'Valor compras año (COP)',
+                            color =I("mediumslateblue"),
+                            line = list(color = "black", width = 1),
+                            marker = list(color = "lightsteelblue", 
+                                          line = list(color = "black",
+                                          width = 1))   
+                            ) %>%
+  
+                            layout( plot_bgcolor='rgb(229, 231, 233)',
+                                    yaxis = list(title = '', 
+                                                 zerolinecolor = '#ffff',
+                                                 zerolinewidth = 2,
+                                                 gridcolor = 'ffff'))
+
+plot_compras
+```
+
+Correlaciones
+=====================================
+
+### Gráfico 4. Correlograma 
+
+```{r} 
+correlaciones <- ggpairs(ecommerce3)+ 
+                    theme(strip.text.x = element_text(size = 8),
+                          strip.text.y = element_text(size = 8),
+                          axis.text.x = element_text(size = 6),
+                          axis.text.y = element_text(size = 6),
+                          )+
+                    labs(caption = 'Normalización de variables Z-score')
+correlaciones
+
+```
+
+### Interpretación
+
+Hay una correlación positiva fuerte (0.809) entre el valor de la compras y los años de la membresía, es decir, que a medida que se incrementa los años de fidelización del comprador se incrementa su gasto anual.
+
+Por otra parte, existe una correlacion positiva moderada entre la duración promedio de la sesión y la duración de la sesión en la app con el gasto anual (0.499 y 0.355 respectivamente ).
+
+
+Estimadores  
+=====================================
+
+### Estimadores de mínimos cuadrados
+
+```{r} 
+# Matriz de la variable respuesta
+var_respuesta <- var_cuantitativas$valor_compras_anuales_cop
+matriz_var_respuesta <- data.matrix(var_respuesta)
+
+# Convertir el dataframe de variables independientes en una matriz
+
+#Data con variables independientes
+
+var_independientes <- var_cuantitativas[c(1:4)]
+
+#En data se incluye la columna de unos 
+var_independientes$colum_unos <- rep(1, 500)
+
+#Se organiza la data
+var_independientes <- var_independientes[c("colum_unos", "min_promedio_sesion",
+                                           "min_en_app", "min_en_web",
+                                           "anos_miembro")]
+#Matriz de variables independientes
+matriz_var_independientes <- data.matrix(var_independientes)
+
+#Transpuesta de la matriz de variables independientes
+matriz_t <- t(matriz_var_independientes)
+
+# Multiplicación de la matriz de variables independientes y su transpuesta
+matriz_m <- matriz_t%*%matriz_var_independientes
+
+# Matriz inversa de matriz_m
+matriz_inv <-solve(matriz_m)
+
+# Multiplicación de matriz_t y matriz_var_respuesta
+matriz1<- matriz_t%*%matriz_var_respuesta
+
+# Multiplicación de matriz_inv y matriz1 para obtener los coeficientes de regresión
+matriz_B<- matriz_inv%*%matriz1
+matriz_B
+```
+
+### Interpretación
+
+Teniendo en cuenta la tendencia lineal creciente entre los años de membresía y el valor de las compras, y la correlación fuerte entre esta dos variables (cor =0.809) (gráfico 4), era de esperarse que el   estimador o coeficiente de regresión asociado a la variable años de membresía, sea la que contribuye en mayor medida a  entender la variabilidad del gasto con un estimador igual a 7.756e-01, calculado bajo la normalización de las variables Z-score.
+
+Luego sigue en importancia la duración de la sesión en la app (estimador = 4.855e-01), por tener una asociación lineal moderada (0.499), la cual se confirma en el correlograma.
+  
+Posteriomente, para predecir el comportamiento del gasto anual, es la duración promedio de navegación con un estimador igual a 3.220158e-01. Esto obedece a la observación de cierta tendencia creciente pero no tan marcada. 
+
+La variable que no contribuye a entender la variabilidad del gasto es la duración de la sesión en el sitio web con un estimador de 5.519625e-03. Lo cual se entiende porque su correlación con el gasto anual es 0.
+
+  
