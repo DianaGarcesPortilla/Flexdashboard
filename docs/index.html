@@ -1,0 +1,2075 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="pandoc" />
+
+
+
+<title>Ecommerce 2023</title>
+
+<meta property="og:title" content="Ecommerce 2023" />
+
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no' />
+
+<link rel="icon" href="data:image/x-icon;" type="image/x-icon">
+
+
+<script type="text/javascript">
+window.FlexDashboardComponents = [];
+</script>
+
+<script src="site_libs/header-attrs-2.29/header-attrs.js"></script>
+<script src="site_libs/jquery-3.6.0/jquery-3.6.0.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link href="site_libs/bootstrap-3.3.5/css/flatly.min.css" rel="stylesheet" />
+<script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
+<script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<style>h1 {font-size: 34px;}
+       h1.title {font-size: 38px;}
+       h2 {font-size: 30px;}
+       h3 {font-size: 24px;}
+       h4 {font-size: 18px;}
+       h5 {font-size: 16px;}
+       h6 {font-size: 12px;}
+       code {color: inherit; background-color: rgba(0, 0, 0, 0.04);}
+       pre:not([class]) { background-color: white }</style>
+<script src="site_libs/stickytableheaders-0.1.19/jquery.stickytableheaders.min.js"></script>
+<link href="site_libs/value-box-accent-static-0.6.2/theme-flatly-value-box.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/flexdashboard.min.css" rel="stylesheet" />
+<link href="site_libs/flexdashboard-css-0.6.2/theme-flatly.css" rel="stylesheet" />
+<link href="site_libs/value-box-core-0.6.2/value-box.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/all.min.css" rel="stylesheet" />
+<link href="site_libs/font-awesome-6.4.2/css/v4-shims.min.css" rel="stylesheet" />
+<link href="site_libs/htmltools-fill-0.5.8.1/fill.css" rel="stylesheet" />
+<script src="site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<script src="site_libs/plotly-binding-4.10.4/plotly.js"></script>
+<script src="site_libs/typedarray-0.1/typedarray.min.js"></script>
+<link href="site_libs/crosstalk-1.2.1/css/crosstalk.min.css" rel="stylesheet" />
+<script src="site_libs/crosstalk-1.2.1/js/crosstalk.min.js"></script>
+<link href="site_libs/plotly-htmlwidgets-css-2.11.1/plotly-htmlwidgets.css" rel="stylesheet" />
+<script src="site_libs/plotly-main-2.11.1/plotly-latest.min.js"></script>
+<style type="text/css">
+/*
+  CSS for flexdashboard.js' use of Sly(). The sizing/position of this CSS needs to be
+  applied _before_ flexdashboard.js initializes, which is why this CSS has been pulled
+  out from flexdashboard.scss and inlined in the document's head.
+*/
+
+.storyboard-nav button {
+  background: transparent;
+  border: 0;
+  opacity: .3;
+  outline: none;
+  padding: 0;
+}
+
+.storyboard-nav button:hover,
+.storyboard-nav button:hover {
+  opacity: .5;
+}
+
+.storyboard-nav button:disabled,
+.storyboard-nav button:disabled {
+  opacity: .1;
+}
+
+.storyboard-nav .sbnext,
+.storyboard-nav .sbprev {
+  float: left;
+  width: 2%;
+  height: 120px;
+}
+
+.storyboard-nav .sbprev {
+  text-align: left;
+  width: 2%;
+}
+
+.storyboard-nav .sbnext {
+  float: right;
+  text-align: right;
+  margin-right: 8px;
+}
+
+.storyboard-nav .sbframelist {
+  margin: 0 auto;
+  width: 94%;
+  height: 120px;
+  overflow: hidden;
+  text-shadow: none;
+  margin-bottom: 8px;
+}
+
+.storyboard-nav .sbframelist ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.storyboard-nav .sbframelist ul li {
+  float: left;
+  width: 270px;
+  height: 100%;
+  padding: 10px 10px 10px 10px;
+  margin-right: 8px;
+  text-align: left;
+  cursor: pointer;
+}
+
+.storyboard-nav .sbframelist ul li:last-child {
+  margin-right: 0px;
+}
+
+.sbframe-commentary {
+  width: 300px;
+}
+
+.sbframe-commentary ul {
+  padding-left: 22px;
+}
+
+.sbframe.active {
+  display: flex;
+}
+
+.sbframe:not(.active) {
+  display: none;
+}
+@media only screen and (min-width: 768px) {
+html, body {
+  height: 100%;
+}
+
+#dashboard-container {
+  height: 100%;
+}
+}
+</style>
+
+
+
+</head>
+
+<body>
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<div class="container-fluid">
+<div class="navbar-header">
+
+<span class="navbar-logo pull-left">
+  
+</span>
+<span class="navbar-brand">
+  Ecommerce 2023
+  <span class="navbar-author">
+        </span>
+</span>
+
+<button id="navbar-button" type="button" class="navbar-toggle collapsed pull-right" data-toggle="collapse" data-bs-toggle="collapse" data-target="#navbar" data-bs-target="#navbar">
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+
+</div>
+<div id="navbar" class="navbar-collapse collapse">
+<ul class="nav navbar-nav navbar-left">
+</ul>
+<ul class="nav navbar-nav navbar-right">
+</ul>
+</div><!--/.nav-collapse-->
+</div><!--/.container-->
+</div><!--/.navbar-->
+
+<img class="mobile-figure" data-mobile-figure-id=fig1 src="index_files/figure-html/unnamed-chunk-9-1.mb.png" />
+<script type="text/javascript">
+
+
+var FlexDashboard = (function () {
+
+  // initialize options
+  var _options = {};
+
+  var FlexDashboard = function() {
+
+    // default options
+    _options = $.extend(_options, {
+      theme: "cosmo",
+      fillPage: false,
+      orientation: 'columns',
+      storyboard: false,
+      defaultFigWidth: 576,
+      defaultFigHeight: 461,
+      defaultFigWidthMobile: 360,
+      defaultFigHeightMobile: 461,
+      isMobile: false,
+      isPortrait: false,
+      resize_reload: true
+    });
+  };
+
+  function init(options) {
+
+    // extend default options
+    $.extend(true, _options, options);
+
+    // add ids to sections that don't have them (pandoc won't assign ids
+    // to e.g. sections with titles consisting of only chinese characters)
+    var nextId = 1;
+    $('.level1:not([id]),.level2:not([id]),.level3:not([id])').each(function() {
+      $(this).attr('id', 'dashboard-' + nextId++);
+    });
+
+    // find navbar items
+    var navbarItems = $('#flexdashboard-navbar');
+    if (navbarItems.length)
+      navbarItems = JSON.parse(navbarItems.html());
+    addNavbarItems(navbarItems);
+
+    // find the main dashboard container
+    var dashboardContainer = $('#dashboard-container');
+
+    // resolve mobile classes
+    resolveMobileClasses(dashboardContainer);
+
+    // one time global initialization for components
+    componentsInit(dashboardContainer);
+
+    // look for a global sidebar
+    var globalSidebar = dashboardContainer.find(".section.level1.sidebar");
+    if (globalSidebar.length > 0) {
+
+      // global layout for fullscreen displays
+      if (!isMobilePhone()) {
+
+         // hoist it up to the top level
+         globalSidebar.insertBefore(dashboardContainer);
+
+         // lay it out (set width/positions)
+         layoutSidebar(globalSidebar, dashboardContainer);
+
+      // tuck sidebar into first page for mobile phones
+      } else {
+
+        // convert it into a level3 section
+        globalSidebar.removeClass('sidebar');
+        globalSidebar.removeClass('level1');
+        globalSidebar.addClass('level3');
+        var h1 = globalSidebar.children('h1');
+        var h3 = $('<h3></h3>');
+        h3.append(h1.contents());
+        h3.insertBefore(h1);
+        h1.detach();
+
+        // move it into the first page
+        var page = dashboardContainer.find('.section.level1').first();
+        if (page.length > 0)
+          page.prepend(globalSidebar);
+      }
+    }
+
+    // look for pages to layout
+    var pages = $('div.section.level1');
+    if (pages.length > 0) {
+
+        // find the navbar and collapse on clicked
+        var navbar = $('#navbar');
+        navbar.on("click", "a[data-toggle!=dropdown]", null, function () {
+           navbar.collapse('hide');
+        });
+
+        // envelop the dashboard container in a tab content div
+        dashboardContainer.wrapInner('<div class="tab-content"></div>');
+
+        pages.each(function(index) {
+
+          // lay it out
+          layoutDashboardPage($(this));
+
+          // add it to the navbar
+          addToNavbar($(this), index === 0);
+
+        });
+
+    } else {
+
+      // remove the navbar and navbar button if we don't
+      // have any navbuttons
+      if (navbarItems.length === 0) {
+        $('#navbar').remove();
+        $('#navbar-button').remove();
+      }
+
+      // add the storyboard class if requested
+      if (_options.storyboard)
+        dashboardContainer.addClass('storyboard');
+
+      // layout the entire page
+      layoutDashboardPage(dashboardContainer);
+    }
+
+    // if we are in shiny we need to trigger a window resize event to
+    // force correct layout of shiny-bound-output elements
+    if (isShinyDoc())
+      $(window).trigger('resize');
+
+    // make main components visible
+    $('.section.sidebar').css('visibility', 'visible');
+    dashboardContainer.css('visibility', 'visible');
+
+    // handle location hash
+    handleLocationHash();
+
+    // intialize prism highlighting
+    initPrismHighlighting();
+
+    // record mobile and orientation state then register a handler
+    // to refresh if resize_reload is set to true and it changes
+    _options.isMobile = isMobilePhone();
+    _options.isPortrait = isPortrait();
+    if (_options.resize_reload) {
+      $(window).on('resize', function() {
+        if (_options.isMobile !== isMobilePhone() ||
+            _options.isPortrait !== isPortrait()) {
+          window.location.reload();
+        }
+      });
+    } else {
+      // if in desktop mode and resizing to mobile, make sure the heights are 100%
+      // This enforces what `fillpage.css` does for "wider" pages.
+      // Since we are not reloading once the page becomes small, we need to force the height to 100%
+      // This is a new situation introduced when `_options.resize_reload` is `false`
+      if (! _options.isMobile) {
+        // only add if `fillpage.css` was added in the first place
+        if (_options.fillPage) {
+          // fillpage.css
+          $("html,body,#dashboard").css("height", "100%");
+        }
+      }
+    }
+    // trigger layoutcomplete event
+    dashboardContainer.trigger('flexdashboard:layoutcomplete');
+  }
+
+  function resolveMobileClasses(dashboardContainer) {
+     // add top level layout class
+    dashboardContainer.addClass(isMobilePhone() ? 'mobile-layout' :
+                                                  'desktop-layout');
+
+    // look for .mobile sections and add .no-mobile to their peers
+    var mobileSections = $('.section.mobile');
+    mobileSections.each(function() {
+       var id = $(this).attr('id');
+       var nomobileId = id.replace(/-\d+$/, '');
+       $('#' + nomobileId).addClass('no-mobile');
+    });
+  }
+
+  function addNavbarItems(navbarItems) {
+
+    var navbarLeft = $('ul.navbar-left');
+    var navbarRight = $('ul.navbar-right');
+
+    for (var i = 0; i<navbarItems.length; i++) {
+
+      // get the item
+      var item = navbarItems[i];
+
+      // determine the container
+      var container = null;
+      if (item.align === "left")
+        container = navbarLeft;
+      else
+        container = navbarRight;
+
+      // navbar menu if we have multiple items
+      if (item.items) {
+        var menu = navbarMenu(null, item.icon, item.title, container);
+        for (var j = 0; j<item.items.length; j++) {
+          var subItem = item.items[j];
+          var li = $('<li></li>');
+          var a = navbarLink(subItem.icon, subItem.title, subItem.href, subItem.target);
+          a.removeClass("nav-link").addClass("dropdown-item");
+          li.append(a);
+          menu.append(li);
+        }
+      } else {
+        var li = $('<li class="nav-item"></li>');
+        li.append(navbarLink(item.icon, item.title, item.href, item.target));
+        container.append(li);
+      }
+    }
+  }
+
+  // create or get a reference to an existing dropdown menu
+  function navbarMenu(id, icon, title, container) {
+    var existingMenu = [];
+    if (id)
+      existingMenu = container.children('#' + id);
+    if (existingMenu.length > 0) {
+      return existingMenu.children('ul');
+    } else {
+      var li = $('<li class="nav-item"></li>');
+      if (id)
+        li.attr('id', id);
+      li.addClass('dropdown');
+      // auto add "Share" title on mobile if necessary
+      if (!title && icon && (icon === "fa-share-alt") && isMobilePhone())
+        title = "Share";
+      if (title) {
+        title = title + ' <span class="caret"></span>';
+      }
+      var a = navbarLink(icon, title, "#");
+      a.addClass('dropdown-toggle');
+      a.attr('data-toggle', 'dropdown');
+      a.attr('data-bs-toggle', 'dropdown');
+      a.attr('role', 'button');
+      a.attr('aria-expanded', 'false');
+      li.append(a);
+      var ul = $('<ul class="dropdown-menu"></ul>');
+      ul.attr('role', 'menu');
+      li.append(ul);
+      container.append(li);
+      return ul;
+    }
+  }
+
+  function addToNavbar(page, active) {
+
+    // capture the id and data-icon attribute (if any)
+    var id = page.attr('id');
+    var icon = page.attr('data-icon');
+    var navmenu = page.attr('data-navmenu');
+    var navmenuIcon = page.attr('data-navmenu-icon');
+
+    // get hidden state (transfer this to navbar)
+    var hidden = page.hasClass('hidden');
+    page.removeClass('hidden');
+
+    // sanitize the id for use with bootstrap tabs
+    id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+    page.attr('id', id);
+
+    // get the wrapper
+    var wrapper = page.closest('.dashboard-page-wrapper');
+
+    // move the id to the wrapper
+    page.removeAttr('id');
+    wrapper.attr('id', id);
+
+    // add the tab-pane class to the wrapper
+    wrapper.addClass('tab-pane');
+
+    // get a reference to the h1, discover its inner contens, then detach it
+    var h1 = wrapper.find('h1').first();
+    var title = h1.contents();
+    h1.detach();
+
+    // create a navbar item
+    var li = $('<li></li>');
+    var a = navbarLink(icon, title, '#' + id);
+    a.attr('data-toggle', 'tab');
+    a.attr('data-bs-toggle', 'tab');
+    li.append(a);
+
+    // add it to the navbar (or navbar menu if specified)
+    var container = $('ul.navbar-left');
+    if (navmenu) {
+      var menuId = navmenu.replace(/\s+/g, '');
+      var menu = navbarMenu(menuId, navmenuIcon, navmenu, container);
+      li.find("> a").removeClass("nav-link").addClass("dropdown-item");
+      menu.append(li);
+    } else {
+      li.addClass("nav-item")
+      container.append(li);
+    }
+
+    // mark active tab and corresponding nav menu item
+    if (active)
+      $(a).tab("show");
+
+    // hide it if requested
+    if (hidden)
+      li.addClass('hidden');
+  }
+
+  function navbarLink(icon, title, href, target) {
+
+    var a = $('<a class="nav-link"></a>');
+    if (icon) {
+
+      // get the name of the icon set and icon
+      var dashPos = icon.indexOf("-");
+      var iconSet = null;
+      var iconSplit = icon.split(" ");
+      if (iconSplit.length > 1) {
+        iconSet = iconSplit[0];
+        icon = iconSplit.slice(1).join(" ");
+      } else {
+        iconSet = icon.substring(0, dashPos);
+      }
+      var iconName = icon.substring(dashPos + 1);
+
+      // create the icon
+      var iconElement = $('<span class="' + iconSet + ' ' + icon + '"></span>');
+      if (title)
+        iconElement.css('margin-right', '7px');
+      a.append(iconElement);
+      // if href is null see if we can auto-generate based on icon (e.g. social)
+      if (!href)
+        maybeGenerateLinkFromIcon(iconName, a);
+    }
+    if (title)
+      a.append(title);
+
+    // add the href.
+    if (href) {
+      if (href === "source_embed") {
+        a.attr('href', '#');
+        a.attr('data-featherlight', "#flexdashboard-source-code");
+        a.featherlight({
+            beforeOpen: function(event){
+              $('body').addClass('unselectable');
+            },
+            afterClose: function(event){
+              $('body').removeClass('unselectable');
+            }
+        });
+      } else {
+        a.attr('href', href);
+      }
+    }
+
+    // add the arget
+    if (target)
+      a.attr('target', target);
+
+    return a;
+  }
+
+  // auto generate a link from an icon name (e.g. twitter) when possible
+  function maybeGenerateLinkFromIcon(iconName, a) {
+
+     var serviceLinks = {
+      "twitter": "https://twitter.com/share?text=" + encodeURIComponent(document.title) + "&url="+encodeURIComponent(location.href),
+      "facebook": "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(location.href),
+      "linkedin": "https://www.linkedin.com/shareArticle?mini=true&url="+encodeURIComponent(location.href) + "&title=" + encodeURIComponent(document.title),
+      "pinterest": "https://pinterest.com/pin/create/link/?url="+encodeURIComponent(location.href) + "&description=" + encodeURIComponent(document.title)
+    };
+
+    var makeSocialLink = function(a, href) {
+      a.attr('href', '#');
+      a.on('click', function(e) {
+        e.preventDefault();
+        window.open(href);
+      });
+    };
+
+    $.each(serviceLinks, function(key, value) {
+      if (iconName.indexOf(key) !== -1)
+        makeSocialLink(a, value);
+    });
+  }
+
+  // layout a dashboard page
+  function layoutDashboardPage(page) {
+
+    // use a page wrapper so that free form content above the
+    // dashboard appears at the top rather than the side (as it
+    // would without the wrapper in a column orientation)
+    var wrapper = $('<div class="dashboard-page-wrapper"></div>');
+    page.wrap(wrapper);
+
+    // if there are no level2 or level3 headers synthesize a level3
+    // header to contain the (e.g. frame it, scroll container, etc.)
+    var headers = page.find('h2,h3');
+    if (headers.length === 0)
+      page.wrapInner('<div class="section level3"></div>');
+
+    // hoist up any content before level 2 or level 3 headers
+    var children = page.children();
+    children.each(function(index) {
+      if ($(this).hasClass('level2') || $(this).hasClass('level3'))
+        return false;
+      $(this).insertBefore(page);
+    });
+
+    // determine orientation and fillPage behavior for distinct media
+    var orientation, fillPage, storyboard;
+
+    // media: mobile phone
+    if (isMobilePhone()) {
+
+      // if there is a sidebar we need to ensure it's content
+      // is properly framed as an h3
+      var sidebar = page.find('.section.sidebar');
+      sidebar.removeClass('sidebar');
+      sidebar.wrapInner('<div class="section level3"></div>');
+      var h2 = sidebar.find('h2');
+      var h3 = $('<h3></h3>');
+      h3.append(h2.contents());
+      h3.insertBefore(h2);
+      h2.detach();
+
+      // wipeout h2 elements then enclose them in a single h2
+      var level2 = page.find('div.section.level2');
+      level2.each(function() {
+        level2.children('h2').remove();
+        level2.children().unwrap();
+      });
+      page.wrapInner('<div class="section level2"></div>');
+
+      // substitute mobile images
+      if (isPortrait()) {
+        var mobileFigures = $('img.mobile-figure');
+        mobileFigures.each(function() {
+          // get the src (might be base64 encoded)
+          var src = $(this).attr('src');
+
+          // find it's peer
+          var id = $(this).attr('data-mobile-figure-id');
+          var img = $('img[data-figure-id=' + id + "]");
+          img.attr('src', src)
+             .attr('width', _options.defaultFigWidthMobile)
+             .attr('height', _options.defaultFigHeightMobile);
+        });
+      }
+
+      // hoist storyboard commentary into it's own section
+      if (page.hasClass('storyboard')) {
+        var commentaryHR = page.find('div.section.level3 hr');
+        commentaryHR.each(function() {
+          var commentary = $(this).nextAll().detach();
+          var commentarySection = $('<div class="section level3"></div>');
+          commentarySection.append(commentary);
+          commentarySection.insertAfter($(this).closest('div.section.level3'));
+          $(this).remove();
+        });
+      }
+
+      // force a non full screen layout by columns
+      orientation = _options.orientation = 'columns';
+      fillPage = _options.fillPage = false;
+      storyboard = _options.storyboard = false;
+
+    // media: desktop
+    } else {
+
+      // determine orientation
+      orientation = page.attr('data-orientation');
+      if (orientation !== 'rows' && orientation != 'columns')
+        orientation = _options.orientation;
+
+      // determine storyboard mode
+      storyboard = page.hasClass('storyboard');
+
+      // fillPage based on options (force for storyboard)
+      fillPage = _options.fillPage || storyboard;
+
+      // handle sidebar
+      var sidebar = page.find('.section.level2.sidebar');
+      if (sidebar.length > 0)
+        layoutSidebar(sidebar, page);
+    }
+
+    // give it and it's parent divs height: 100% if we are in fillPage mode
+    if (fillPage) {
+      page.addClass('vertical-layout-fill');
+      page.css('height', '100%');
+      page.parents('div').css('height', '100%');
+    } else {
+      page.addClass('vertical-layout-scroll');
+    }
+
+    // perform the layout
+    if (storyboard)
+      layoutPageAsStoryboard(page);
+    else if (orientation === 'rows')
+      layoutPageByRows(page, fillPage);
+    else if (orientation === 'columns')
+      layoutPageByColumns(page, fillPage);
+  }
+
+  function layoutSidebar(sidebar, content) {
+
+    // get it out of the header hierarchy
+    sidebar = sidebar.first();
+    if (sidebar.hasClass('level1')) {
+      sidebar.removeClass('level1');
+      sidebar.children('h1').remove();
+    } else if (sidebar.hasClass('level2')) {
+      sidebar.removeClass('level2');
+      sidebar.children('h2').remove();
+    }
+
+    // determine width
+    var sidebarWidth = isTablet() ? 220 : 250;
+    var dataWidth = parseInt(sidebar.attr('data-width'));
+    if (dataWidth)
+      sidebarWidth = dataWidth;
+
+    // set the width and shift the page right to accomodate the sidebar
+    sidebar.css('width', sidebarWidth + 'px');
+    content.css('padding-left', sidebarWidth + 'px');
+
+    // wrap it's contents in a form
+    sidebar.wrapInner($('<form></form>'));
+  }
+
+  function layoutPageAsStoryboard(page) {
+
+    // create storyboard navigation
+    var nav = $('<div class="storyboard-nav"></div>');
+
+    // add navigation buttons
+    var prev = $('<button class="sbprev"><i class="fa fa-angle-left"></i></button>');
+    nav.append(prev);
+    var next= $('<button class="sbnext"><i class="fa fa-angle-right"></i></button>');
+    nav.append(next);
+
+    // add navigation frame
+    var frameList = $('<div class="sbframelist"></div>');
+    nav.append(frameList);
+    var ul = $('<ul></ul>');
+    frameList.append(ul);
+
+     // find all the level3 sections (those are the storyboard frames)
+    var frames = page.find('div.section.level3');
+    frames.each(function() {
+
+      // mark it
+      $(this).addClass('sbframe');
+
+      // divide it into chart content and (optional) commentary
+      $(this).addClass('dashboard-column-orientation');
+
+      // stuff the chart into it's own div w/ flex
+      $(this).wrapInner('<div class="sbframe-component"></div>');
+      setFlex($(this), 1);
+      var frame = $(this).children('.sbframe-component');
+
+      // extract the title from the h3
+      var li = $('<li></li>');
+      var h3 = frame.children('h3');
+      li.append(h3.contents());
+      h3.detach();
+      ul.append(li);
+
+      // extract commentary
+      var hr = frame.children('hr');
+      if (hr.length) {
+        var commentary = hr.nextAll().detach();
+        hr.remove();
+        var commentaryFrame = $('<div class="sbframe-commentary"></div>');
+        commentaryFrame.addClass('flowing-content-shim');
+        commentaryFrame.addClass('flowing-content-container');
+        commentaryFrame.append(commentary);
+        $(this).append(commentaryFrame);
+
+        // look for a data-commentary-width attribute
+        var commentaryWidth = $(this).attr('data-commentary-width');
+        if (commentaryWidth)
+          commentaryFrame.css('width', commentaryWidth + 'px');
+      }
+
+      // layout the chart (force flex)
+      var result = layoutChart(frame, true);
+
+      // ice the notes if there are none
+      if (!result.notes)
+        frame.find('.chart-notes').remove();
+
+      // set flex on chart
+      setFlex(frame, 1);
+    });
+
+    // create a div to hold all the frames
+    var frameContent = $('<div class="sbframe-content"></div>');
+    frameContent.addClass('dashboard-row-orientation');
+    frameContent.append(frames.detach());
+
+    // row orientation to stack nav and frame content
+    page.addClass('dashboard-row-orientation');
+    page.append(nav);
+    page.append(frameContent);
+    setFlex(frameContent, 1);
+
+    // initialize sly
+    var sly = new Sly(frameList, {
+    		horizontal: true,
+    		itemNav: 'basic',
+    		smart: true,
+    		activateOn: 'click',
+    		startAt: 0,
+    		scrollBy: 1,
+    		activatePageOn: 'click',
+    		speed: 200,
+    		moveBy: 600,
+    		dragHandle: true,
+    		dynamicHandle: true,
+    		clickBar: true,
+    		keyboardNavBy: 'items',
+    		next: next,
+    		prev: prev
+    	}).init();
+
+    // make first frame active
+    frames.removeClass('active');
+    frames.first().addClass('active');
+
+    // subscribe to frame changed events
+    sly.on('active', function (eventName, itemIndex) {
+      frames.removeClass('active');
+      frames.eq(itemIndex).addClass('active')
+                          .trigger('shown');
+    });
+  }
+
+  function layoutPageByRows(page, fillPage) {
+
+    // row orientation
+    page.addClass('dashboard-row-orientation');
+
+    // find all the level2 sections (those are the rows)
+    var rows = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (rows.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      rows = page.find('div.section.level2');
+    }
+
+    rows.each(function () {
+
+      // flags
+      var haveNotes = false;
+      var haveFlexHeight = true;
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // give it row layout semantics if it's not a tabset
+      if (!isTabset)
+        $(this).addClass('dashboard-row');
+
+      // find all of the level 3 subheads
+      var columns = $(this).find('div.section.level3');
+
+      // determine figureSizes sizes
+      var figureSizes = chartFigureSizes(columns);
+
+      // fixup the columns
+      columns.each(function(index) {
+
+        // layout the chart (force flex if we are in a tabset)
+        var result = layoutChart($(this), isTabset);
+
+        // update flexHeight state
+        if (!result.flex)
+          haveFlexHeight = false;
+
+        // update state
+        if (result.notes)
+          haveNotes = true;
+
+        // set the column flex based on the figure width
+        // (value boxes will just get the default figure width)
+        var chartWidth = figureSizes[index].width;
+        setFlex($(this), chartWidth + ' ' + chartWidth + ' 0px');
+
+      });
+
+      // remove empty chart note divs
+      if (isTabset)
+        $(this).find('.chart-notes').filter(function() {
+            return $(this).html() === "&nbsp;";
+        }).remove();
+      if (!haveNotes)
+        $(this).find('.chart-notes').remove();
+
+       // make it a flexbox row
+      if (haveFlexHeight)
+        $(this).addClass('dashboard-row-flex');
+
+      // now we can set the height on all the wrappers (based on maximum
+      // figure height + room for title and notes, or data-height on the
+      // container if specified). However, don't do this if there is
+      // no flex on any of the constituent columns
+      var flexHeight = null;
+      var dataHeight = parseInt($(this).attr('data-height'));
+      if (dataHeight)
+        flexHeight = adjustedHeight(dataHeight, columns.first());
+      else if (haveFlexHeight)
+        flexHeight = maxChartHeight(figureSizes, columns);
+      if (flexHeight) {
+        if (fillPage)
+          setFlex($(this), flexHeight + ' ' + flexHeight + ' 0px');
+        else {
+          $(this).css('height', flexHeight + 'px');
+          setFlex($(this), '0 0 ' + flexHeight + 'px');
+        }
+      }
+
+    });
+  }
+
+  function layoutPageByColumns(page, fillPage) {
+
+    // column orientation
+    page.addClass('dashboard-column-orientation');
+
+    // find all the level2 sections (those are the columns)
+    var columns = page.find('div.section.level2');
+
+    // if there are no level2 sections then treat the
+    // entire page as if it's a level 2 section
+    if (columns.length === 0) {
+      page.wrapInner('<div class="section level2"></div>');
+      columns = page.find('div.section.level2');
+    }
+
+    // layout each column
+    columns.each(function (index) {
+
+      // remove the h2
+      $(this).children('h2').remove();
+
+      // make it a flexbox column
+      $(this).addClass('dashboard-column');
+
+      // check for a tabset
+      var isTabset = $(this).hasClass('tabset');
+      if (isTabset)
+        layoutTabset($(this));
+
+      // find all the h3 elements
+      var rows = $(this).find('div.section.level3');
+
+      // get the figure sizes for the rows
+      var figureSizes = chartFigureSizes(rows);
+
+      // column flex is the max row width (or data-width if specified)
+      var flexWidth;
+      var dataWidth = parseInt($(this).attr('data-width'));
+      if (dataWidth)
+        flexWidth = dataWidth;
+      else
+        flexWidth = maxChartWidth(figureSizes);
+      setFlex($(this), flexWidth + ' ' + flexWidth + ' 0px');
+
+      // layout each chart
+      rows.each(function(index) {
+
+        // perform the layout
+        var result = layoutChart($(this), false);
+
+        // ice the notes if there are none
+        if (!result.notes)
+          $(this).find('.chart-notes').remove();
+
+        // set flex height based on figHeight, then adjust
+        if (result.flex) {
+          var chartHeight = figureSizes[index].height;
+          chartHeight = adjustedHeight(chartHeight, $(this));
+          if (fillPage)
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' 0px');
+          else {
+            $(this).css('height', chartHeight + 'px');
+            setFlex($(this), chartHeight + ' ' + chartHeight + ' ' + chartHeight + 'px');
+          }
+        }
+      });
+    });
+  }
+
+  function chartFigureSizes(charts) {
+
+    // sizes
+    var figureSizes = new Array(charts.length);
+
+    // check each chart
+    charts.each(function(index) {
+
+      // start with default
+      figureSizes[index] = {
+        width: _options.defaultFigWidth,
+        height: _options.defaultFigHeight
+      };
+
+      // look for data-height or data-width then knit options
+      var dataWidth = parseInt($(this).attr('data-width'));
+      var dataHeight = parseInt($(this).attr('data-height'));
+      var knitrOptions = $(this).find('.knitr-options:first');
+      var knitrWidth, knitrHeight;
+      if (knitrOptions) {
+        knitrWidth = parseInt(knitrOptions.attr('data-fig-width'));
+        knitrHeight =  parseInt(knitrOptions.attr('data-fig-height'));
+      }
+
+      // width
+      if (dataWidth)
+        figureSizes[index].width = dataWidth;
+      else if (knitrWidth)
+        figureSizes[index].width = knitrWidth;
+
+      // height
+      if (dataHeight)
+        figureSizes[index].height = dataHeight;
+      else if (knitrHeight)
+        figureSizes[index].height = knitrHeight;
+    });
+
+    // return sizes
+    return figureSizes;
+  }
+
+  function maxChartHeight(figureSizes, charts) {
+
+    // first compute the maximum height
+    var maxHeight = _options.defaultFigHeight;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].height > maxHeight)
+        maxHeight = figureSizes[i].height;
+
+    // now add offests for chart title and chart notes
+    if (charts.length)
+      maxHeight = adjustedHeight(maxHeight, charts.first());
+
+    return maxHeight;
+  }
+
+  function adjustedHeight(height, chart) {
+    if (chart.length > 0) {
+      var chartTitle = chart.find('.chart-title');
+      if (chartTitle.length)
+        height += chartTitle.first().outerHeight();
+      var chartNotes = chart.find('.chart-notes');
+      if (chartNotes.length)
+        height += chartNotes.first().outerHeight();
+    }
+    return height;
+  }
+
+  function maxChartWidth(figureSizes) {
+    var maxWidth = _options.defaultFigWidth;
+    for (var i = 0; i<figureSizes.length; i++)
+      if (figureSizes[i].width > maxWidth)
+        maxWidth = figureSizes[i].width;
+    return maxWidth;
+  }
+
+  // layout a chart
+  function layoutChart(chart, forceFlex) {
+
+    // state to return
+    var result = {
+      notes: false,
+      flex: false
+    };
+
+    // extract the title
+    var title = extractTitle(chart);
+
+    // find components that apply to this container
+    var components = componentsFind(chart);
+
+    // if it's a custom component then call it and return
+    var customComponents = componentsCustom(components);
+    if (customComponents.length) {
+      componentsLayout(customComponents, title, chart);
+      result.notes = false;
+      result.flex = forceFlex || componentsFlex(customComponents);
+      return result;
+    }
+
+    // put all the content in a chart wrapper div
+    chart.addClass('chart-wrapper');
+    chart.wrapInner('<div class="chart-stage"></div>');
+    var chartContent = chart.children('.chart-stage');
+
+    // flex the content if appropriate
+    result.flex = forceFlex || componentsFlex(components);
+    if (result.flex) {
+      // add flex classes
+      chart.addClass('chart-wrapper-flex');
+      chartContent.addClass('chart-stage-flex');
+
+      // additional shim to break out of flexbox sizing
+      chartContent.wrapInner('<div class="chart-shim"></div>');
+      chartContent = chartContent.children('.chart-shim');
+    }
+
+    // set custom data-padding attribute
+    var pad = chart.attr('data-padding');
+    if (pad) {
+      if (pad === "0")
+        chart.addClass('no-padding');
+      else {
+        pad = pad + 'px';
+        chartContent.css('left', pad)
+                    .css('top', pad)
+                    .css('right', pad)
+                    .css('bottom', pad)
+      }
+    }
+
+    // call compoents
+    componentsLayout(components, title, chartContent);
+
+    // also activate components on shiny output
+    findShinyOutput(chartContent).on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+
+          // see if we opted out of flex based on our output (for shiny
+          // we can't tell what type of output we have until after the
+          // value is bound)
+          var components = componentsFind(element);
+          var flex = forceFlex || componentsFlex(components);
+          if (!flex) {
+            chart.css('height', "");
+            setFlex(chart, "");
+            chart.removeClass('chart-wrapper-flex');
+            chartContent.removeClass('chart-stage-flex');
+            chartContent.children().unwrap();
+          }
+
+          // perform layout
+          componentsLayout(components, title, element.parent());
+        }, 10);
+      });
+
+    // add the title
+    var chartTitle = $('<div class="chart-title"></div>');
+    chartTitle.append(title);
+    chart.prepend(chartTitle);
+
+    // add the notes section
+    var chartNotes = $('<div class="chart-notes"></div>');
+    chartNotes.html('&nbsp;');
+    chart.append(chartNotes);
+
+    // attempt to extract notes if we have a component
+    if (components.length)
+      result.notes = extractChartNotes(chartContent, chartNotes);
+
+    // return result
+    return result;
+  }
+
+  // build a tabset from a section div with the .tabset class
+  function layoutTabset(tabset) {
+
+    // check for fade option
+    var fade = tabset.hasClass("tabset-fade");
+    var pills = tabset.hasClass("tabset-pills");
+    var navClass = pills ? "nav-pills" : "nav-tabs";
+
+    // determine the heading level of the tabset and tabs
+    var match = tabset.attr('class').match(/level(\d) /);
+    if (match === null)
+      return;
+    var tabsetLevel = Number(match[1]);
+    var tabLevel = tabsetLevel + 1;
+
+    // find all subheadings immediately below
+    var tabs = tabset.find("div.section.level" + tabLevel);
+    if (!tabs.length)
+      return;
+
+    // create tablist and tab-content elements
+    var tabList = $('<ul class="nav ' + navClass + '" role="tablist"></ul>');
+    $(tabs[0]).before(tabList);
+    var tabContent = $('<div class="tab-content"></div>');
+    $(tabs[0]).before(tabContent);
+
+    // build the tabset
+    var activeTab = 0;
+    tabs.each(function(i) {
+
+      // get the tab div
+      var tab = $(tabs[i]);
+
+      // get the id then sanitize it for use with bootstrap tabs
+      var id = tab.attr('id');
+
+      // see if this is marked as the active tab
+      if (tab.hasClass('active'))
+        activeTab = i;
+
+      // sanitize the id for use with bootstrap tabs
+      id = id.replace(/[.\/?&!#<>]/g, '').replace(/\s/g, '_');
+      tab.attr('id', id);
+
+      // get the heading element within it and grab it's text
+      var heading = tab.find('h' + tabLevel + ':first');
+      var headingDom = heading.contents();
+
+      // build and append the tab list item
+      var a = $('<a role="tab" data-toggle="tab" data-bs-toggle="tab" class="nav-link"></a>');
+      a.append(headingDom);
+      a.attr('href', '#' + id);
+      a.attr('aria-controls', id);
+      var li = $('<li role="presentation" class="nav-item"></li>');
+      li.append(a);
+      tabList.append(li);
+
+      // set it's attributes
+      tab.attr('role', 'tabpanel');
+      tab.addClass('tab-pane');
+      tab.addClass('tabbed-pane');
+      tab.addClass('no-title');
+      if (fade)
+        tab.addClass('fade');
+
+      // move it into the tab content div
+      tab.detach().appendTo(tabContent);
+    });
+
+    // set active tab
+    $(tabList.children()[activeTab]).tab("show");
+    var active = $(tabContent.children('div.section')[activeTab]);
+    active.addClass('active');
+    if (fade)
+      active.addClass('in');
+
+    // add nav-tabs-custom
+    tabset.addClass('nav-tabs-custom');
+
+    // internal layout is dashboard-column with tab-content flexing
+    tabset.addClass('dashboard-column');
+    setFlex(tabContent, 1);
+  }
+
+  // one time global initialization for components
+  function componentsInit(dashboardContainer) {
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.init)
+        component.init(dashboardContainer);
+    }
+  }
+
+  // find components that apply within a container
+  function componentsFind(container) {
+
+    // look for components
+    var components = [];
+    for (var i=0; i<window.FlexDashboardComponents.length; i++) {
+      var component = window.FlexDashboardComponents[i];
+      if (component.find(container).length)
+        components.push(component);
+    }
+
+    // if there were none then use a special flowing content component
+    // that just adds a scrollbar in fillPage mode
+    if (components.length == 0) {
+      components.push({
+        find: function(container) {
+          return container;
+        },
+
+        flex: function(fillPage) {
+          return fillPage;
+        },
+
+        layout: function(title, container, element, fillPage) {
+          if (fillPage) {
+            container.addClass('flowing-content-shim');
+            container.addClass('flowing-content-container');
+          }
+        }
+      });
+    }
+
+    return components;
+  }
+
+  // if there is a custom component then pick it out
+  function componentsCustom(components) {
+    var customComponent = [];
+    for (var i=0; i<components.length; i++)
+      if (components[i].type === "custom") {
+        customComponent.push(components[i]);
+        break;
+      }
+    return customComponent;
+  }
+
+  // query all components for flex
+  function componentsFlex(components) {
+
+    // no components at all means no flex
+    if (components.length === 0)
+      return false;
+
+    // otherwise query components (assume true unless we see false)
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++)
+      if (components[i].flex && !components[i].flex(_options.fillPage))
+        return false;
+    return true;
+  }
+
+  // layout all components
+  function componentsLayout(components, title, container) {
+    var isMobile = isMobilePhone();
+    for (var i=0; i<components.length; i++) {
+      var element = components[i].find(container);
+      if (components[i].layout) {
+        // call layout (don't call other components if it returns false)
+        var result = components[i].layout(title, container, element, _options.fillPage);
+        if (result === false)
+          return;
+      }
+    }
+  }
+
+  // get a reference to the h3, discover it's inner html, and remove it
+  function extractTitle(container) {
+    var h3 = container.children('h3').first();
+    var title = '';
+    if (!container.hasClass('no-title'))
+      title = h3.contents();
+    h3.detach();
+    return title;
+  }
+
+  // extract chart notes
+  function extractChartNotes(chartContent, chartNotes) {
+    // look for a terminating blockquote or image caption
+    var blockquote = chartContent.children('blockquote:last-child');
+    var caption = chartContent.children('div.image-container')
+                              .children('p.caption');
+    if (blockquote.length) {
+      chartNotes.empty().append(blockquote.children('p:first-child').contents());
+      blockquote.remove();
+      return true;
+    } else if (caption.length) {
+      chartNotes.empty().append(caption.contents());
+      caption.remove();
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  function findShinyOutput(chartContent) {
+    return chartContent.find('.shiny-text-output, .shiny-html-output');
+  }
+
+  // safely detect rendering on a mobile phone
+  function isMobilePhone() {
+    try
+    {
+      return ! window.matchMedia("only screen and (min-width: 768px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  function isFillPage() {
+    return _options.fillPage;
+  }
+
+  // detect portrait mode
+  function isPortrait() {
+    return ($(window).width() < $(window).height());
+  }
+
+  // safely detect rendering on a tablet
+  function isTablet() {
+    try
+    {
+      return window.matchMedia("only screen and (min-width: 769px) and (max-width: 992px)").matches;
+    }
+    catch(e) {
+      return false;
+    }
+  }
+
+  // test whether this is a shiny doc
+  function isShinyDoc() {
+    return (typeof(window.Shiny) !== "undefined" && !!window.Shiny.outputBindings);
+  }
+
+  // set flex using vendor specific prefixes
+  function setFlex(el, flex) {
+    el.css('-webkit-box-flex', flex)
+      .css('-webkit-flex', flex)
+      .css('-ms-flex', flex)
+      .css('flex', flex);
+  }
+
+  // support bookmarking of pages
+  function handleLocationHash() {
+
+    // restore tab/page from bookmark
+    var hash = window.decodeURIComponent(window.location.hash);
+    if (hash.length > 0) {
+      // Update the tab without .showPage() so that we don't change page history
+      $('ul.nav a[href="' + hash + '"]').tab('show');
+    }
+
+    // navigate to a tab when the history changes
+    window.addEventListener("popstate", function(e) {
+      var hash = window.decodeURIComponent(window.location.hash);
+      var activeTab = $('ul.nav a[href="' + hash + '"]');
+      if (activeTab.length) {
+        activeTab.tab('show');
+      } else {
+        // returning to the base page URL without a hash activates first tab
+        $('ul.nav a:first').tab('show');
+      }
+    });
+
+    // add a hash to the URL when the user clicks on a tab/page
+    $('.navbar-nav a[data-toggle="tab"]').on('click', function(e) {
+      var baseUrl = FlexDashboardUtils.urlWithoutHash(window.location.href);
+      var hash = FlexDashboardUtils.urlHash($(this).attr('href'));
+      var href = baseUrl + hash;
+      FlexDashboardUtils.setLocation(href);
+    });
+
+    // handle clicks of other links that should activate pages
+    var navPages = $('ul.navbar-nav li a[data-toggle=tab]');
+    navPages.each(function() {
+      var href =  $(this).attr('href');
+      var links = $('a[href="' + href + '"][data-toggle!=tab]');
+      links.each(function() {
+        $(this).on('click', function(e) {
+          window.FlexDashboardUtils.showPage(href);
+        });
+      });
+    });
+  }
+
+  // tweak Prism highlighting
+  function initPrismHighlighting() {
+
+    if (window.Prism) {
+      Prism.languages.insertBefore('r', 'comment', {
+        'heading': [
+          {
+            // title 1
+        	  // =======
+
+        	  // title 2
+        	  // -------
+        	  pattern: /\w+.*(?:\r?\n|\r)(?:====+|----+)/,
+            alias: 'operator'
+          },
+          {
+            // ### title 3
+            pattern: /(^\s*)###[^#].+/m,
+            lookbehind: true,
+            alias: 'operator'
+          }
+        ]
+      });
+
+      // prism highlight
+      Prism.highlightAll();
+    }
+  }
+
+  FlexDashboard.prototype = {
+    constructor: FlexDashboard,
+    init: init,
+    isMobilePhone: isMobilePhone,
+    isFillPage: isFillPage
+  };
+
+  return FlexDashboard;
+
+})();
+
+// utils
+window.FlexDashboardUtils = {
+  resizableImage: function(img) {
+    var src = img.attr('src');
+    var url = 'url("' + src + '")';
+    img.parent().css('background', url)
+                .css('background-size', 'contain')
+                .css('background-repeat', 'no-repeat')
+                .css('background-position', 'center')
+                .addClass('image-container');
+  },
+  setLocation: function(href) {
+    if (history && history.pushState) {
+      history.pushState(null, null, href);
+    } else {
+      window.location.replace(href);
+    }
+    setTimeout(function() {
+        window.scrollTo(0, 0);
+    }, 10);
+  },
+  showPage: function(href) {
+    $('ul.navbar-nav li a[href="' + href + '"]').tab('show');
+    var baseUrl = this.urlWithoutHash(window.location.href);
+    var loc = baseUrl + href;
+    this.setLocation(loc);
+  },
+  showLinkedValue: function(href) {
+    // check for a page link
+    if ($('ul.navbar-nav li a[data-toggle=tab][href="' + href + '"]').length > 0)
+      this.showPage(href);
+    else
+      window.open(href);
+  },
+  urlWithoutHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(0, hashLoc);
+    else
+      return url;
+  },
+  urlHash: function(url) {
+    var hashLoc = url.indexOf('#');
+    if (hashLoc != -1)
+      return url.substring(hashLoc);
+    else
+      return "";
+  }
+};
+
+window.FlexDashboard = new FlexDashboard();
+
+// empty content
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    if (container.find('p').length == 0)
+      return container;
+    else
+      return $();
+  }
+})
+
+// plot image
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('p')
+                    .children('img:only-child');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// plot image (figure style)
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.figure').children('img');
+  },
+
+  layout: function(title, container, element, fillPage) {
+    FlexDashboardUtils.resizableImage(element);
+  }
+});
+
+// htmlwidget
+window.FlexDashboardComponents.push({
+
+  init: function(dashboardContainer) {
+    // trigger "shown" after initial layout to force static htmlwidgets
+    // in runtime: shiny to be resized after the dom has been transformed
+    dashboardContainer.on('flexdashboard:layoutcomplete', function(event) {
+      setTimeout(function() {
+        dashboardContainer.trigger('shown');
+      }, 200);
+    });
+  },
+
+  find: function(container) {
+    return container.children('div[id^="htmlwidget-"],div.html-widget');
+  }
+});
+
+// gauge
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.children('div.html-widget.gauge');
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+
+  }
+
+});
+
+// shiny output
+window.FlexDashboardComponents.push({
+  find: function(container) {
+    return container.children('div[class^="shiny-"]');
+  }
+});
+
+// bootstrap table
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    var bsTable = container.find('table.table');
+    if (bsTable.length !== 0)
+      return bsTable;
+    else
+      return container.find('tr.header').parent('thead').parent('table');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var bsTable = element;
+
+    // fixup xtable generated tables with a proper thead
+    var headerRow = bsTable.find('tbody > tr:first-child > th').parent();
+    if (headerRow.length > 0) {
+      var thead = $('<thead></thead>');
+      bsTable.prepend(thead);
+      headerRow.detach().appendTo(thead);
+    }
+
+    // improve appearance
+    container.addClass('bootstrap-table');
+
+    // for fill page provide scrolling w/ sticky headers
+    if (fillPage) {
+      // force scrollbar on overflow
+      container.addClass('flowing-content-shim');
+
+      // stable table headers when scrolling
+      bsTable.stickyTableHeaders({
+        scrollableArea: container
+      });
+    }
+  }
+});
+
+// embedded shiny app
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('iframe.shiny-frame');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage) {
+      element.attr('height', '100%');
+    } else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (!height)
+        height = element.attr('height');
+      if (!height)
+        element.attr('height', 500);
+    }
+  }
+});
+
+// shiny fillRow or fillCol
+window.FlexDashboardComponents.push({
+
+  find: function(container) {
+    return container.find('.flexfill-container');
+  },
+
+  flex: function(fillPage) {
+    return fillPage;
+  },
+
+  layout: function(title, container, element, fillPage) {
+    if (fillPage)
+      element.css('height', '100%');
+    else {
+      // provide default height if necessary
+      var height = element.get(0).style.height;
+      if (height === "100%" || height === "auto" || height === "initial" ||
+          height === "inherit" || !height) {
+        element.css('height', 500);
+      }
+    }
+  }
+});
+
+// valueBox
+window.FlexDashboardComponents.push({
+
+  type: "custom",
+
+  find: function(container) {
+    if (container.find('span.value-output, .shiny-valuebox-output').length)
+      return container;
+    else
+      return $();
+  },
+
+  flex: function(fillPage) {
+    return false;
+  },
+
+  layout: function(title, container, element, fillPage) {
+
+    // alias variables
+    var chartTitle = title;
+    var valueBox = element;
+
+    // add value-box class to container
+    container.addClass('value-box');
+
+    // value paragraph
+    var value = $('<p class="value"></p>');
+
+    // if we have shiny-text-output then just move it in
+    var valueOutputSpan = [];
+    var shinyOutput = valueBox.find('.shiny-valuebox-output').detach();
+    if (shinyOutput.length) {
+      valueBox.children().remove();
+      shinyOutput.html("&mdash;");
+      value.append(shinyOutput);
+    } else {
+      // extract the value (remove leading vector index)
+      var chartValue = valueBox.text().trim();
+      chartValue = chartValue.replace("[1] ", "");
+      valueOutputSpan = valueBox.find('span.value-output').detach();
+      valueBox.children().remove();
+      value.text(chartValue);
+    }
+
+    // caption
+    var caption = $('<p class="caption"></p>');
+    caption.append(chartTitle);
+
+    // build inner div for value box and add it
+    var inner = $('<div class="inner"></div>');
+    inner.append(value);
+    inner.append(caption);
+    valueBox.append(inner);
+
+    // add icon if specified
+    var icon = $('<div class="icon"><i></i></div>');
+    valueBox.append(icon);
+    function setIcon(chartIcon) {
+      var iconLib = "";
+      var iconSplit = chartIcon.split(" ");
+      if (iconSplit.length > 1) {
+        iconLib = iconSplit[0];
+        chartIcon = iconSplit.slice(1).join(" ");
+      } else {
+        var components = chartIcon.split("-");
+        if (components.length > 1)
+          iconLib = components[0];
+      }
+      icon.children('i').attr('class', iconLib + ' ' + chartIcon);
+    }
+    var chartIcon = valueBox.attr('data-icon');
+    if (chartIcon)
+      setIcon(chartIcon);
+
+    // handle data attributes in valueOutputSpan
+    function handleValueOutput(valueOutput) {
+
+      // caption
+      var dataCaption = valueOutput.attr('data-caption');
+      if (dataCaption)
+        caption.html(dataCaption);
+
+      // icon
+      var dataIcon = valueOutput.attr('data-icon');
+      if (dataIcon)
+        setIcon(dataIcon);
+
+      // If valueBox(color=) was an accent color, this attr should
+      // be populated with the accent color and the relevant CSS comes
+      // in through HTML dependencies
+      var dataColorAccent = valueOutput.attr('data-color-accent');
+      var valueBoxClasses = "value-box-" + (["primary", "info", "danger", "warning", "success"].join(" value-box-"));
+      if (dataColorAccent) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.addClass('value-box-' + dataColorAccent);
+      }
+
+      // If valueBox(color=) was a CSS color, these other data-color-*
+      // attrs will be populated
+      var dataColor = valueOutput.attr('data-color');
+      if (dataColor) {
+        valueBox.removeClass(valueBoxClasses);
+        valueBox.css('background-color', dataColor);
+      }
+      var dataColorText = valueOutput.attr('data-color-text');
+      if (dataColorText) {
+        valueBox.find(".inner").css('color', dataColorText);
+      }
+      var dataColorIcon = valueOutput.attr('data-color-icon');
+      if (dataColorIcon) {
+        valueBox.find(".icon").css('color', dataColorIcon);
+      }
+
+      // url
+      var dataHref = valueOutput.attr('data-href');
+      if (dataHref) {
+        valueBox.addClass('linked-value');
+        valueBox.off('click.value-box');
+        valueBox.on('click.value-box', function(e) {
+          window.FlexDashboardUtils.showLinkedValue(dataHref);
+        });
+      }
+    }
+
+    // check for a valueOutputSpan
+    if (valueOutputSpan.length > 0) {
+      handleValueOutput(valueOutputSpan);
+    }
+
+    // if we have a shinyOutput then bind a listener to handle
+    // new valueOutputSpan values
+    shinyOutput.on('shiny:value',
+      function(event) {
+        var element = $(event.target);
+        setTimeout(function() {
+          var valueOutputSpan = element.find('span.value-output');
+          if (valueOutputSpan.length > 0)
+            handleValueOutput(valueOutputSpan);
+        }, 10);
+      }
+    );
+  }
+});
+</script>
+
+<div id="dashboard-container">
+
+<style type="text/css">
+.value-box .value {
+    color: black;
+}
+.value-box .value {
+    font-size: 30px;
+}
+.value-box .caption {
+  font-size: 13px;
+  color: black;
+}
+.value-box .icon i {
+  font-size: 40px;
+  color: rgba(0, 0, 0, 0.15);
+}
+
+</style>
+<div id="navegaciónfidelizaciónconsumo" class="section level1">
+<h1>Navegación|Fidelización|Consumo</h1>
+<div id="row" class="section level2" data-height="60">
+<h2>Row</h2>
+<div id="duración-media-de-la-sesión" class="section level3">
+<h3>Duración media de la sesión</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-icon="fa-clock" data-color="#EAEDED" data-color-text="#1a1a1a" data-color-icon="#f5f6f6">33 min</span>
+</div>
+<div id="duración-media-de-la-sesión-en-la-website"
+class="section level3">
+<h3>Duración media de la sesión en la website</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-icon="fa-clock" data-color="#EAEDED" data-color-text="#1a1a1a" data-color-icon="#f5f6f6">37 min</span>
+</div>
+<div id="duración-media-de-la-sesión-en-la-app" class="section level3">
+<h3>Duración media de la sesión en la App</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-icon="fa-clock" data-color="#EAEDED" data-color-text="#1a1a1a" data-color-icon="#f5f6f6">12 min</span>
+</div>
+<div id="años-promedio-con-la-membresía" class="section level3">
+<h3>Años promedio con la membresía</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-icon="fa-address-card" data-color="#EAEDED" data-color-text="#1a1a1a" data-color-icon="#f5f6f6">3.5 años</span>
+</div>
+<div id="promedio-compras-año---cop" class="section level3">
+<h3>Promedio compras año - COP</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<span class="value-output" data-icon="fa-dollar-sign" data-color="#EAEDED" data-color-text="#1a1a1a" data-color-icon="#f5f6f6">1.997.256 ± 317.259</span>
+</div>
+</div>
+<div id="row-1" class="section level2" data-height="200">
+<h2>Row</h2>
+<div id="interpretación" class="section level3">
+<h3>Interpretación</h3>
+<p>La distribución de la duración de sesión (sea en el e-commerce en
+general, la página web o en la App), los años de membresía y el valor de
+las compras del año es normal (gráfico 1, 2 y 3). Es decir, hay una
+concentración de los clientes hacia el valor promedio del tiempo de
+navegación, los años de membresía y el valor de sus compras.</p>
+</div>
+</div>
+<div id="row-2" class="section level2" data-height="740">
+<h2>Row</h2>
+<div id="gráfico-1.-distribución-de-la-duración-de-navegación"
+class="section level3">
+<h3>Gráfico 1. Distribución de la duración de navegación</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-3d2aca514d1ea6b8ddde" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-3d2aca514d1ea6b8ddde">{"x":{"visdat":{"22d48e65ac1":["function () ","plotlyVisDat"]},"cur_data":"22d48e65ac1","attrs":{"22d48e65ac1":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"x":{},"y":{},"split":{},"type":"violin","box":{"visible":true},"meanline":{"visible":true},"color":{},"colors":"Spectral","line":{"color":"black","width":1},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"plot_bgcolor":"rgb(229, 231, 233)","xaxis":{"domain":[0,1],"automargin":true,"title":"Sitio de navegación","type":"category","categoryorder":"array","categoryarray":["App","Sitio en general","Website"]},"yaxis":{"domain":[0,1],"automargin":true,"title":"Minutos","zerolinecolor":"#ffff","zerolinewidth":2,"gridcolor":"ffff"},"showlegend":false,"hovermode":"closest"},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(252,141,89,0.5)","x":["App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App","App"],"y":[12.66,11.109999999999999,11.33,13.720000000000001,12.800000000000001,12.029999999999999,11.369999999999999,12.35,13.390000000000001,11.81,13.34,11.58,10.960000000000001,12.960000000000001,13.15,12.640000000000001,11.73,12.01,14.720000000000001,13.99,11.369999999999999,12.880000000000001,13.380000000000001,11.66,12.890000000000001,11.77,12.779999999999999,13.01,11.98,11.970000000000001,12.31,10.869999999999999,13.390000000000001,13.1,11.630000000000001,11.94,11.76,11.98,9.9499999999999993,12.49,11.73,10.630000000000001,12.51,11.529999999999999,13.41,12.17,13.15,12.99,11.859999999999999,11.4,13.859999999999999,10.960000000000001,10.32,9.9800000000000004,12.65,11.59,13.76,10.57,11.83,12.06,12.5,9.6099999999999994,13.73,11.67,13.279999999999999,15.130000000000001,12.699999999999999,11.84,11.31,11.19,11.890000000000001,12.23,10.67,12.82,13.59,12.24,11.550000000000001,11.43,10.890000000000001,11.93,12.6,10.949999999999999,13.9,10.880000000000001,10.34,11.630000000000001,12.52,10.609999999999999,12.83,12.07,12.529999999999999,13.52,11.66,13.66,11.83,13.289999999999999,11.94,13.35,12.02,12.08,13.41,11.279999999999999,11.449999999999999,12.6,10.99,13.09,12.19,10.720000000000001,12.93,13.449999999999999,12.15,12.18,11.01,11.6,12.73,11.220000000000001,12.01,11.73,12.09,13.07,12.85,11.56,11.109999999999999,12.81,11.76,12.58,11.960000000000001,10.65,12.75,11.539999999999999,11.92,12.42,11.81,12.76,11.85,12.699999999999999,12.220000000000001,11.279999999999999,10.74,10.960000000000001,11.74,12.42,10.539999999999999,11.92,11.91,12.49,12.380000000000001,10.48,12.300000000000001,10.859999999999999,10.720000000000001,12.390000000000001,10.98,12.970000000000001,12.050000000000001,13.460000000000001,12.44,12.210000000000001,11.59,11.380000000000001,12.359999999999999,12.4,12.539999999999999,13.279999999999999,11.800000000000001,12.720000000000001,12.039999999999999,12.470000000000001,13.16,11.050000000000001,10.640000000000001,13.44,13.279999999999999,11.75,10.859999999999999,11.69,11.550000000000001,11.720000000000001,12.18,12.32,11.08,13.18,12.83,11.51,11.859999999999999,12.289999999999999,10.93,13.33,10.9,12.279999999999999,12.039999999999999,11.720000000000001,11.199999999999999,13.380000000000001,11.390000000000001,10.77,11.82,13.81,11.66,13.1,13.07,12.49,11.34,11.199999999999999,11.33,13.92,11.029999999999999,11.08,10.539999999999999,11.800000000000001,12.44,12.1,12.380000000000001,13.720000000000001,12.73,13.69,10.01,11.44,12.35,10.75,11.59,11.24,11.109999999999999,12.109999999999999,11.869999999999999,10.26,12.17,13.09,13.01,10.98,13.109999999999999,12.140000000000001,13.91,11.4,13.029999999999999,11.619999999999999,12.6,13.19,13.27,11.75,11.57,12.640000000000001,11.390000000000001,11.82,12.73,11.199999999999999,11.35,14.220000000000001,11.550000000000001,11.92,12.279999999999999,10.130000000000001,12.029999999999999,13.17,12.33,13.890000000000001,12.93,11.380000000000001,14.07,10.800000000000001,14.43,13.039999999999999,11.74,12.49,12.890000000000001,11.67,11.779999999999999,12.140000000000001,12.220000000000001,13.4,12.960000000000001,12.880000000000001,13.33,12.16,11.23,12.460000000000001,9.8499999999999996,13.33,13.68,11.640000000000001,13.49,11.619999999999999,13.01,11.470000000000001,11.68,12.09,14.33,12.91,9.8200000000000003,12.81,13.06,10.529999999999999,11.140000000000001,10.98,11.15,11.949999999999999,11.470000000000001,11.039999999999999,11.17,11.56,12.23,13.19,13.390000000000001,11.85,12.27,13.460000000000001,11.789999999999999,10.99,12.640000000000001,8.5099999999999998,11.66,11.970000000000001,11.800000000000001,12.68,13.029999999999999,12.449999999999999,12.24,10.970000000000001,13.67,13.390000000000001,12.970000000000001,12.970000000000001,10.73,10.949999999999999,12.609999999999999,13.039999999999999,11,13.279999999999999,10.630000000000001,13.19,11.35,12.949999999999999,11.74,11.890000000000001,10.76,11.609999999999999,11.98,12.460000000000001,10.08,12.59,14.289999999999999,11.92,11.41,12.82,11.67,10.609999999999999,12.51,11.300000000000001,10.890000000000001,12.1,12.69,11.390000000000001,10.73,11.94,12.720000000000001,10.970000000000001,13.42,11.85,11.92,13.15,12.69,10.35,9.3200000000000003,12.58,11.76,12.640000000000001,11.83,10.44,12.73,9.4800000000000004,10.16,11.609999999999999,11.27,11.16,10.1,12.76,12.06,11.94,12.449999999999999,12.279999999999999,12.779999999999999,12.960000000000001,9.9499999999999993,13.130000000000001,11.52,10.970000000000001,13.529999999999999,12.039999999999999,10.94,12.66,11.73,11.92,11.51,12.42,13.890000000000001,12.85,10.890000000000001,12.91,11.57,11.970000000000001,13.08,11.960000000000001,13.25,13.09,12.529999999999999,11.24,12.07,12.050000000000001,11.23,11.91,13.050000000000001,13,11.52,10.31,12.43,10.75,11.02,12.220000000000001,12.33,10.81,12.140000000000001,12.94,13.300000000000001,10.4,11.890000000000001,11.59,13.27,12.99,14.039999999999999,11.91,11.140000000000001,12.9,12.390000000000001,11.82,10.99,14.130000000000001,11.91,11.48,10.050000000000001,12.43,11.970000000000001,11.119999999999999,8.6699999999999999,12.5,12.130000000000001,11.73,11.949999999999999,12.56,12.48,12.59,10.949999999999999,11.48,11.119999999999999,10.970000000000001,11.59,10.710000000000001,11.08,12.949999999999999,10.57,11.66,13.59,11.369999999999999,11.23,10.289999999999999,14.119999999999999,12.42,10.77,12.66,12.67,13.970000000000001,11.51,11.41,12.26,12.710000000000001,13.470000000000001,11.19,11.25,12.359999999999999,11.76,11.76,11.550000000000001,12.48,11.73,12.210000000000001,11.9,12.220000000000001,12.01,11.91,12.130000000000001,11.31,11.609999999999999,11.69,11.199999999999999,12.630000000000001,13.35,13.57,11.699999999999999,11.5,12.390000000000001,12.42],"type":"violin","box":{"visible":true},"meanline":{"visible":true},"line":{"color":"black","width":1},"name":"App","marker":{"color":"rgba(252,141,89,1)","line":{"color":"rgba(252,141,89,1)"}},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(255,255,191,0.5)","x":["Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general","Sitio en general"],"y":[34.5,31.93,33,34.310000000000002,33.329999999999998,33.869999999999997,32.020000000000003,32.740000000000002,33.990000000000002,31.940000000000001,33.990000000000002,33.880000000000003,29.530000000000001,33.189999999999998,32.390000000000001,30.739999999999998,32.130000000000003,32.340000000000003,32.189999999999998,32.619999999999997,32.909999999999997,33.5,31.530000000000001,32.899999999999999,34.509999999999998,33.030000000000001,33.539999999999999,32.340000000000003,33.109999999999999,33.109999999999999,33.240000000000002,33.460000000000001,32.18,32.729999999999997,32.82,33.619999999999997,31.719999999999999,32.869999999999997,32.75,32.57,32.07,33.020000000000003,33.789999999999999,32.890000000000001,32.039999999999999,34.560000000000002,34.560000000000002,32.729999999999997,33.119999999999997,31.66,33.259999999999998,33.899999999999999,34.189999999999998,33.759999999999998,34.390000000000001,33.93,32.689999999999998,34.299999999999997,32.840000000000003,33.75,33.880000000000003,33.079999999999998,32.229999999999997,32.789999999999999,32.770000000000003,34.369999999999997,33.079999999999998,32.810000000000002,32.43,32.18,33.149999999999999,34.340000000000003,32.390000000000001,32.810000000000002,33.880000000000003,32.049999999999997,33.560000000000002,33.140000000000001,32.600000000000001,33.170000000000002,31.510000000000002,34.590000000000003,33.5,32.399999999999999,34.659999999999997,31.809999999999999,33.880000000000003,34.450000000000003,31.960000000000001,32.609999999999999,32.490000000000002,33.619999999999997,33.469999999999999,33.710000000000001,32.200000000000003,32.460000000000001,33.789999999999999,34.18,32.289999999999999,33.829999999999998,32.5,31.890000000000001,32.43,33.439999999999998,31.390000000000001,33.469999999999999,32.289999999999999,32.060000000000002,33.159999999999997,33.359999999999999,31.850000000000001,32.009999999999998,32.390000000000001,32.649999999999999,32.93,33.240000000000002,33.93,33.060000000000002,32.399999999999999,33.890000000000001,34.57,33.700000000000003,33.270000000000003,31.359999999999999,33.009999999999998,31.579999999999998,32.659999999999997,34.710000000000001,34.539999999999999,32.770000000000003,33.700000000000003,32.439999999999998,34.310000000000002,32.460000000000001,33.539999999999999,33.359999999999999,32.689999999999998,34.560000000000002,33.549999999999997,31.949999999999999,31.07,31.850000000000001,32.609999999999999,32.119999999999997,33.920000000000002,33.479999999999997,32.119999999999997,32.259999999999998,32.689999999999998,32.380000000000003,34.340000000000003,32.890000000000001,32.509999999999998,31.949999999999999,36.140000000000001,32.450000000000003,32.289999999999999,34.600000000000001,33.600000000000001,34.57,32.840000000000003,33.5,33.299999999999997,30.879999999999999,33.149999999999999,32.049999999999997,33.630000000000003,34.049999999999997,33.640000000000001,32.649999999999999,33.43,31.859999999999999,34.479999999999997,32.530000000000001,33.43,33.310000000000002,32.329999999999998,34.710000000000001,32.640000000000001,33.079999999999998,32.229999999999997,34.140000000000001,32.5,33.119999999999997,33.090000000000003,32.530000000000001,32.479999999999997,32.539999999999999,32.280000000000001,32.200000000000003,34.710000000000001,32.710000000000001,33.689999999999998,31.57,33.460000000000001,31.82,32.729999999999997,32.409999999999997,33.509999999999998,30.84,34.880000000000003,34.009999999999998,31.530000000000001,31.050000000000001,34.600000000000001,34.969999999999999,32.299999999999997,33.32,32.899999999999999,32.560000000000002,31.77,34.079999999999998,33.299999999999997,34.329999999999998,32.079999999999998,33.609999999999999,32.75,32.119999999999997,32.530000000000001,31.739999999999998,34.119999999999997,33.640000000000001,34.329999999999998,34.810000000000002,34.640000000000001,32.840000000000003,32.299999999999997,31.949999999999999,32.729999999999997,33.950000000000003,32.350000000000001,34.170000000000002,32.979999999999997,32,34.200000000000003,33.18,32.689999999999998,31.629999999999999,31.260000000000002,31.719999999999999,32.920000000000002,32.689999999999998,34.049999999999997,32.450000000000003,31.280000000000001,32.979999999999997,31.91,34.399999999999999,32.960000000000001,33.780000000000001,32.670000000000002,32.729999999999997,33.409999999999997,31.719999999999999,32.710000000000001,33.140000000000001,34.380000000000003,35.530000000000001,33.25,32.100000000000001,35.039999999999999,32.549999999999997,32.579999999999998,33.299999999999997,33.109999999999999,33.899999999999999,34.560000000000002,33.729999999999997,31.600000000000001,34.32,34.009999999999998,33.539999999999999,34.439999999999998,33.549999999999997,31.82,32.359999999999999,33.189999999999998,32.189999999999998,32.609999999999999,32.259999999999998,32.270000000000003,33.799999999999997,31.649999999999999,33.079999999999998,31.309999999999999,32.869999999999997,33.710000000000001,33.909999999999997,32.310000000000002,34.390000000000001,32.420000000000002,33.539999999999999,33.369999999999997,33.789999999999999,33.770000000000003,31.309999999999999,33.609999999999999,33.399999999999999,33.619999999999997,30.489999999999998,31.899999999999999,33.030000000000001,32.979999999999997,30.82,33.909999999999997,33.299999999999997,31.91,32.409999999999997,32.640000000000001,34.100000000000001,33.25,34.729999999999997,30.390000000000001,33.380000000000003,32.880000000000003,34.5,33.57,32.850000000000001,33.530000000000001,33.420000000000002,32.5,33.670000000000002,33.259999999999998,32.759999999999998,33.479999999999997,33.789999999999999,33.219999999999999,31.129999999999999,33.369999999999997,32.840000000000003,30.57,32.270000000000003,33.140000000000001,33.490000000000002,31.98,32.130000000000003,32.299999999999997,31.829999999999998,32.020000000000003,33,31.82,34.460000000000001,32.340000000000003,32.299999999999997,33.07,33.890000000000001,32.770000000000003,33.770000000000003,31.809999999999999,32.009999999999998,33.299999999999997,32.189999999999998,34.939999999999998,33.549999999999997,32.390000000000001,33.340000000000003,33.670000000000002,34,32.659999999999997,32.049999999999997,33.229999999999997,32.079999999999998,33.979999999999997,34.18,32.600000000000001,32.030000000000001,33.100000000000001,32.990000000000002,34.390000000000001,34.359999999999999,33.710000000000001,32.399999999999999,31.829999999999998,31.370000000000001,31.449999999999999,33.579999999999998,32.399999999999999,35.039999999999999,32.780000000000001,33.969999999999999,33.390000000000001,33.560000000000002,33.590000000000003,34.189999999999998,33.590000000000003,33.240000000000002,33.210000000000001,33.640000000000001,33.590000000000003,34.200000000000003,35.859999999999999,33.479999999999997,33.259999999999998,32.32,32.43,31.449999999999999,35.740000000000002,34.009999999999998,34.140000000000001,32.380000000000003,33.170000000000002,33.25,33.600000000000001,33.090000000000003,32.280000000000001,33.439999999999998,32.869999999999997,31.530000000000001,33,32.090000000000003,33.270000000000003,32.990000000000002,33.859999999999999,32.590000000000003,32.380000000000003,31.52,33.450000000000003,32.219999999999999,31.670000000000002,33.719999999999999,33.219999999999999,31.57,33.890000000000001,33.130000000000003,34.369999999999997,34.079999999999998,31.43,33.630000000000003,31.859999999999999,33.289999999999999,33.75,34.140000000000001,31.120000000000001,34.280000000000001,33.670000000000002,32.259999999999998,35.43,31.969999999999999,32.149999999999999,33.920000000000002,33.200000000000003,32.539999999999999,34.079999999999998,33.030000000000001,31.27,32.210000000000001,33.5,32.899999999999999,32.200000000000003,32.68,33,33.939999999999998,33.549999999999997,33.68,32.640000000000001,33.420000000000002,32.770000000000003,33.119999999999997,35.369999999999997,33.979999999999997,34.030000000000001,32.770000000000003,33.5,31.870000000000001,32.530000000000001,34.850000000000001,34.210000000000001,33.460000000000001,34.200000000000003,31.170000000000002,32.520000000000003,34.520000000000003,33.670000000000002,31.609999999999999,33.700000000000003,33.810000000000002,34.340000000000003,31.059999999999999,33.07,34.609999999999999,34.240000000000002,32.049999999999997,30.969999999999999,33.609999999999999,33.450000000000003,33.369999999999997,33.450000000000003,32.899999999999999,35.630000000000003,32.25,34.700000000000003,34.340000000000003,33.68,32.060000000000002,33.43,33.240000000000002,34.700000000000003,32.649999999999999,33.32,33.719999999999999],"type":"violin","box":{"visible":true},"meanline":{"visible":true},"line":{"color":"black","width":1},"name":"Sitio en general","marker":{"color":"rgba(255,255,191,1)","line":{"color":"rgba(255,255,191,1)"}},"xaxis":"x","yaxis":"y","frame":null},{"fillcolor":"rgba(153,213,148,0.5)","x":["Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website","Website"],"y":[39.579999999999998,37.270000000000003,37.109999999999999,36.719999999999999,37.539999999999999,34.479999999999997,36.68,37.369999999999997,37.530000000000001,37.149999999999999,37.229999999999997,37.090000000000003,37.420000000000002,36.140000000000001,36.619999999999997,36.210000000000001,34.890000000000001,38.390000000000001,38.240000000000002,37.189999999999998,37.609999999999999,37.439999999999998,38.729999999999997,36.770000000000003,37.640000000000001,37.740000000000002,36.43,37.850000000000001,35.289999999999999,37.280000000000001,36.159999999999997,35.619999999999997,35.689999999999998,38.880000000000003,35.369999999999997,38.770000000000003,36.770000000000003,37.039999999999999,37.390000000000001,36.369999999999997,37.530000000000001,37.5,37.140000000000001,36.890000000000001,36.109999999999999,39.130000000000003,37.340000000000003,36.460000000000001,36.579999999999998,36.590000000000003,37.780000000000001,37.270000000000003,37.450000000000003,35.93,38.469999999999999,35.25,39.25,36.170000000000002,36.810000000000002,37.270000000000003,38.049999999999997,36.490000000000002,38,37.409999999999997,36.600000000000001,37.159999999999997,35.359999999999999,36.380000000000003,37.68,40.009999999999998,36.270000000000003,36.159999999999997,38.009999999999998,37.030000000000001,38.259999999999998,38.729999999999997,36.630000000000003,35.890000000000001,38.210000000000001,36.909999999999997,39.600000000000001,35.880000000000003,37.060000000000002,37.780000000000001,36.159999999999997,36.18,37.149999999999999,36.82,36.950000000000003,36.109999999999999,37.880000000000003,36.770000000000003,36.049999999999997,37.719999999999999,36.630000000000003,38.630000000000003,38.060000000000002,37.829999999999998,39.07,35.890000000000001,35.990000000000002,37.390000000000001,37.579999999999998,36.259999999999998,38.07,35.850000000000001,36.149999999999999,37.710000000000001,38.170000000000002,38.5,37.329999999999998,37.719999999999999,38.420000000000002,37.310000000000002,35.600000000000001,37.689999999999998,36.700000000000003,36,38.310000000000002,37.539999999999999,35.009999999999998,37.670000000000002,37.390000000000001,36.549999999999997,37.57,37.090000000000003,36.630000000000003,37.149999999999999,36.710000000000001,37.530000000000001,37.25,38.950000000000003,37.409999999999997,36.600000000000001,37.420000000000002,36.100000000000001,36.590000000000003,36.490000000000002,37.460000000000001,37.329999999999998,36.600000000000001,35.979999999999997,35.729999999999997,39.289999999999999,38.270000000000003,36.520000000000003,37.229999999999997,37.340000000000003,36.950000000000003,36.579999999999998,38.310000000000002,37.43,37.399999999999999,36.969999999999999,36.960000000000001,37.240000000000002,37.329999999999998,33.909999999999997,39.090000000000003,38.299999999999997,38.039999999999999,35.009999999999998,38.310000000000002,36.939999999999998,37.659999999999997,37.659999999999997,38.920000000000002,35.039999999999999,36.409999999999997,37.630000000000003,37.579999999999998,36.880000000000003,35.909999999999997,36.939999999999998,38.840000000000003,37.479999999999997,38.579999999999998,36.810000000000002,35.670000000000002,37.82,37.960000000000001,38.859999999999999,37.68,37.25,36.090000000000003,37.060000000000002,36.549999999999997,37.960000000000001,36.090000000000003,38.229999999999997,37.640000000000001,37.149999999999999,35.490000000000002,36.340000000000003,37.909999999999997,37.280000000000001,37.100000000000001,37.43,37.280000000000001,35.909999999999997,36.68,36.049999999999997,37.039999999999999,38.689999999999998,35.460000000000001,37.950000000000003,38.25,36.780000000000001,35.530000000000001,37.780000000000001,38.130000000000003,36.060000000000002,38.759999999999998,35.770000000000003,36.539999999999999,34.890000000000001,38.350000000000001,36.219999999999999,37.119999999999997,35.740000000000002,37.740000000000002,37.68,38.590000000000003,36.289999999999999,37.719999999999999,36.140000000000001,37.07,37.609999999999999,36.649999999999999,37.950000000000003,35.57,37.259999999999998,37.789999999999999,37.329999999999998,37.079999999999998,35.969999999999999,37.369999999999997,37.07,36.969999999999999,38.57,36.909999999999997,36.100000000000001,39.079999999999998,36.950000000000003,35.969999999999999,37.689999999999998,36.32,37.520000000000003,36.950000000000003,36.840000000000003,37.189999999999998,34.850000000000001,36.130000000000003,36.200000000000003,36.670000000000002,39.219999999999999,36.359999999999999,36.640000000000001,38.990000000000002,37.369999999999997,37.369999999999997,36.659999999999997,36.850000000000001,38.240000000000002,36.530000000000001,37.340000000000003,37.979999999999997,36.850000000000001,36.82,37.289999999999999,38.659999999999997,36.229999999999997,36.770000000000003,36.579999999999998,35.670000000000002,37.75,36.880000000000003,36.899999999999999,37.740000000000002,37.030000000000001,37.549999999999997,38.420000000000002,37.789999999999999,35.68,38.719999999999999,36.619999999999997,35.719999999999999,39.07,35.740000000000002,38.549999999999997,37.259999999999998,37.030000000000001,35.950000000000003,34.810000000000002,37.240000000000002,36.189999999999998,37.060000000000002,38.619999999999997,35.630000000000003,35.979999999999997,36.990000000000002,38.07,37.810000000000002,36.93,36.579999999999998,36.340000000000003,36.259999999999998,37.369999999999997,36.520000000000003,35.460000000000001,36.549999999999997,36.549999999999997,36.32,35.619999999999997,37.869999999999997,37.530000000000001,37.280000000000001,36.609999999999999,36.899999999999999,37.189999999999998,38.299999999999997,37.329999999999998,36.149999999999999,37.649999999999999,37.229999999999997,36.310000000000002,38.439999999999998,37.390000000000001,38.039999999999999,35.920000000000002,37.090000000000003,37.109999999999999,37.939999999999998,35.859999999999999,36.600000000000001,39.25,38.270000000000003,37.43,38.07,37.329999999999998,36.770000000000003,37.770000000000003,35.780000000000001,37.960000000000001,37.840000000000003,37.979999999999997,35.82,37.829999999999998,34.899999999999999,36.380000000000003,37.329999999999998,38.200000000000003,36.880000000000003,35.899999999999999,35.130000000000003,35.969999999999999,37.759999999999998,37.490000000000002,35.719999999999999,37.649999999999999,36.049999999999997,39.049999999999997,36.909999999999997,35.439999999999998,37.920000000000002,38,36.840000000000003,35.939999999999998,36.229999999999997,37.909999999999997,37.759999999999998,38.109999999999999,36.960000000000001,37.090000000000003,38.039999999999999,36.909999999999997,37.689999999999998,35.780000000000001,36.670000000000002,38.299999999999997,35.549999999999997,37.950000000000003,37.350000000000001,35.43,36.189999999999998,34.57,38.950000000000003,34.490000000000002,36.170000000000002,37.030000000000001,36.880000000000003,37.32,37.130000000000003,36.159999999999997,38.380000000000003,37.869999999999997,35.57,36.049999999999997,38.920000000000002,37.200000000000003,37.329999999999998,36.520000000000003,37.310000000000002,38.32,36.689999999999998,37.049999999999997,35.57,38.509999999999998,37,35.189999999999998,38.780000000000001,36.990000000000002,35.939999999999998,36.729999999999997,37.630000000000003,38.789999999999999,37.640000000000001,36.950000000000003,37.07,36.009999999999998,37.140000000000001,36.729999999999997,36.390000000000001,36.68,37.859999999999999,36.460000000000001,37.240000000000002,39.670000000000002,37.020000000000003,38.420000000000002,38.399999999999999,36.609999999999999,35.630000000000003,36.310000000000002,36.350000000000001,37.020000000000003,36.090000000000003,39.240000000000002,37.18,37.310000000000002,36.829999999999998,36.979999999999997,35.909999999999997,37.649999999999999,35.460000000000001,35.630000000000003,36.490000000000002,37.810000000000002,37.68,37.68,37.649999999999999,36.840000000000003,36.810000000000002,37.719999999999999,36.32,35.770000000000003,34.780000000000001,37.030000000000001,36.859999999999999,37.43,36.840000000000003,35.259999999999998,37.210000000000001,36.93,38.409999999999997,37.670000000000002,34.649999999999999,36.369999999999997,37.490000000000002,36.670000000000002,36.600000000000001,36.380000000000003,38.859999999999999,36.170000000000002,37.07,36.299999999999997,38.68,36.170000000000002,36.880000000000003,38.130000000000003,35.770000000000003,35.539999999999999,36.07,37.200000000000003,36.869999999999997,36.359999999999999,36.530000000000001,36.060000000000002,38.189999999999998,37.130000000000003,37.68,36.810000000000002,37.840000000000003,35.539999999999999,37.969999999999999,36.420000000000002,37.189999999999998,38.329999999999998,36.840000000000003,35.770000000000003],"type":"violin","box":{"visible":true},"meanline":{"visible":true},"line":{"color":"black","width":1},"name":"Website","marker":{"color":"rgba(153,213,148,1)","line":{"color":"rgba(153,213,148,1)"}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="gráfico-2.-distribución-de-los-años-de-membresía"
+class="section level3">
+<h3>Gráfico 2. Distribución de los años de membresía</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-1abbdc408514be3e8a61" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-1abbdc408514be3e8a61">{"x":{"visdat":{"22d410f15f7e":["function () ","plotlyVisDat"]},"cur_data":"22d410f15f7e","attrs":{"22d410f15f7e":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"violin","box":{"visible":true},"meanline":{"visible":true},"x0":"Años de membresía","color":["gold"],"line":{"color":"black","width":1},"marker":{"color":"yellow","line":{"color":"black","width":1}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"plot_bgcolor":"rgb(229, 231, 233)","yaxis":{"domain":[0,1],"automargin":true,"title":"","zerolinecolor":"#ffff","zerolinewidth":2,"gridcolor":"ffff"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(255,215,0,0.5)","y":[4.0800000000000001,2.6600000000000001,4.0999999999999996,3.1200000000000001,4.4500000000000002,5.4900000000000002,4.6900000000000004,4.4299999999999997,3.27,3.2000000000000002,2.48,3.71,4.0499999999999998,3.9199999999999999,2.4900000000000002,3.3599999999999999,3.1400000000000001,2.4199999999999999,1.52,4.0599999999999996,4.5999999999999996,1.5600000000000001,2.25,3.9199999999999999,5.71,2.7200000000000002,4.6500000000000004,3,3.9199999999999999,4.7400000000000002,3.0600000000000001,3.4700000000000002,4.3399999999999999,2.8199999999999998,4.1200000000000001,3.6499999999999999,1.8500000000000001,3.4500000000000002,4.6500000000000004,4.2199999999999998,4.6699999999999999,4.6500000000000004,4.21,4.6399999999999997,2.2599999999999998,3.6600000000000001,3.8799999999999999,4.1100000000000003,3.2000000000000002,3.2000000000000002,5.9800000000000004,2.9500000000000002,2.0899999999999999,3.8599999999999999,2.8700000000000001,3.3900000000000001,3,3.3199999999999998,3.4700000000000002,3.9700000000000002,4.6399999999999997,5.0800000000000001,4.7999999999999998,3.4100000000000001,3.46,5.3799999999999999,4,3.4399999999999999,2.7799999999999998,3.5499999999999998,2.6000000000000001,4.6900000000000004,3.3999999999999999,3.8500000000000001,3.2599999999999998,3.1200000000000001,2.8399999999999999,4.4699999999999998,4.4400000000000004,3.1600000000000001,3.75,3.1600000000000001,4.1299999999999999,1.9099999999999999,4.4000000000000004,5.1100000000000003,2.6699999999999999,3.3700000000000001,4.5700000000000003,3.9199999999999999,2.48,4.1299999999999999,4,1.3600000000000001,4.1900000000000004,3.8700000000000001,4.0800000000000001,4.25,3.9100000000000001,3.02,3.1800000000000002,2.8799999999999999,2.5899999999999999,2.9700000000000002,3.4300000000000002,2.9300000000000002,3.7799999999999998,3,3.8500000000000001,3.3199999999999998,3.3599999999999999,3.7200000000000002,3.54,2.79,5.4900000000000002,2.5899999999999999,2.75,5,3.8700000000000001,3.7999999999999998,3.29,4.7199999999999998,4.0199999999999996,3.6400000000000001,3.8300000000000001,4.5300000000000002,4.1100000000000003,3.2200000000000002,3.2799999999999998,2.9199999999999999,3.9100000000000001,4.9199999999999999,2.4700000000000002,4.1299999999999999,1.77,2.7200000000000002,3.8999999999999999,2.4900000000000002,3.8599999999999999,3.5800000000000001,3.96,3.25,3.9100000000000001,1.4399999999999999,2.9100000000000001,3.3500000000000001,3.0899999999999999,4.5099999999999998,1.8300000000000001,3.9900000000000002,2.6499999999999999,6.4000000000000004,5.3899999999999997,6.0800000000000001,3.8599999999999999,2.9399999999999999,5.0800000000000001,6.9199999999999999,3.6000000000000001,3.7799999999999998,3.3100000000000001,0.96999999999999997,3.77,3.5899999999999999,4.5199999999999996,3.6800000000000002,2.8700000000000001,4.0599999999999996,3.02,4.7199999999999998,2.9300000000000002,2.3599999999999999,4.9699999999999998,0.80000000000000004,3.6699999999999999,1.72,4.7699999999999996,4.0899999999999999,4.1299999999999999,3.4399999999999999,4.7199999999999998,3.23,2.9700000000000002,3.1800000000000002,4.8099999999999996,3.6200000000000001,3.2599999999999998,3.6000000000000001,4.79,3.3199999999999998,4.6299999999999999,3.3100000000000001,4.0199999999999996,4.3700000000000001,2.5699999999999998,3.52,1.5,5.04,4.4800000000000004,3.3599999999999999,1.9199999999999999,4.3300000000000001,3.8100000000000001,3.0899999999999999,4.54,5.0700000000000003,3.1099999999999999,4.75,3.0899999999999999,3.2000000000000002,3.8500000000000001,3.9700000000000002,3.8399999999999999,2.9100000000000001,1.1399999999999999,2.6899999999999999,3.1099999999999999,4.8499999999999996,2.3100000000000001,4.8399999999999999,3.6800000000000002,5.25,3.8900000000000001,4.3899999999999997,4,0.79000000000000004,4.4000000000000004,2.6499999999999999,2.3700000000000001,3.0499999999999998,3.6400000000000001,3.3999999999999999,4.2999999999999998,3.7999999999999998,2.6299999999999999,3.6299999999999999,3.4700000000000002,1.49,2.27,5.0199999999999996,2.4700000000000002,4.2999999999999998,2.4399999999999999,3.6600000000000001,5,2.4100000000000001,5.3099999999999996,4.0800000000000001,3.2799999999999998,3.6299999999999999,3.98,3.29,2.3100000000000001,3.5600000000000001,3.3500000000000001,2.9100000000000001,3.79,4.0300000000000002,4.9800000000000004,2.7000000000000002,3.9300000000000002,3.46,2.1800000000000002,2.71,4.5899999999999999,4.2599999999999998,3.7799999999999998,1.6200000000000001,3.4100000000000001,3.6099999999999999,3.2799999999999998,5.0099999999999998,3.3700000000000001,5.4500000000000002,3.7599999999999998,4.6600000000000001,3.8100000000000001,5.0499999999999998,2.8700000000000001,3.2400000000000002,3.0899999999999999,4.5599999999999996,3.0099999999999998,1.8100000000000001,3.5899999999999999,3.0499999999999998,3.6299999999999999,1.48,2.9199999999999999,1.8100000000000001,3.3700000000000001,2.21,5.4500000000000002,3.2000000000000002,4.7300000000000004,3.21,3.7999999999999998,4.1200000000000001,5.46,1.48,3.77,2.8999999999999999,3.5699999999999998,1.0800000000000001,3.02,5.5700000000000003,2.3999999999999999,3.5,5.2300000000000004,1.8400000000000001,3.3599999999999999,2.96,2.0800000000000001,3.6800000000000002,4.6900000000000004,4.0099999999999998,2.5299999999999998,2.8700000000000001,3.52,4.0700000000000003,1.2,3.23,4.0899999999999999,4.0199999999999996,4.21,2.02,4.2400000000000002,4.6299999999999999,3,1.8200000000000001,4.0800000000000001,3.6899999999999999,2.1899999999999999,3.21,1.98,3.3500000000000001,3.5299999999999998,2.9700000000000002,2.6200000000000001,2.7999999999999998,2.96,4.3499999999999996,3.8700000000000001,4.6200000000000001,2.73,3.54,3.1299999999999999,5.1399999999999997,3.1299999999999999,3.1800000000000002,3.8300000000000001,4.8099999999999996,4.0499999999999998,4.54,3.48,2.6299999999999999,4.79,2.7599999999999998,2.1600000000000001,4.2000000000000002,2.1400000000000001,3.4300000000000002,2.8700000000000001,3.1400000000000001,3.5299999999999998,5.04,3.6099999999999999,2.8999999999999999,5.71,5.0499999999999998,4.7800000000000002,2.9700000000000002,2.6699999999999999,3.6200000000000001,4.2400000000000002,2.48,3.5099999999999998,3.3100000000000001,3.54,1.1299999999999999,3.23,3.3500000000000001,3.2200000000000002,3.79,3.5600000000000001,2.9300000000000002,3.0499999999999998,2.7400000000000002,2.7799999999999998,4.3300000000000001,3.4199999999999999,3.3399999999999999,4.6600000000000001,3.2200000000000002,3.77,3.4199999999999999,6.1200000000000001,3.4900000000000002,4.0800000000000001,2.8300000000000001,5.4100000000000001,3.4500000000000002,2.9399999999999999,4.75,3.5299999999999998,3.8999999999999999,2.3999999999999999,2.8500000000000001,3.7799999999999998,4.3499999999999996,4.5700000000000003,4.6200000000000001,3.0099999999999998,4.79,4.3300000000000001,1.4299999999999999,4.1399999999999997,2.9100000000000001,3.98,3.7000000000000002,5.8399999999999999,4.5599999999999996,4.4900000000000002,3.8599999999999999,3.0499999999999998,4.6500000000000004,4.0199999999999996,3.9700000000000002,3.7400000000000002,3.3799999999999999,4.5999999999999996,2.2200000000000002,4.29,2.1200000000000001,0.93999999999999995,3.7599999999999998,4,3.5299999999999998,3.54,4.1600000000000001,3.5499999999999998,4.1299999999999999,2.25,4.0499999999999998,3.0699999999999998,4.3300000000000001,3.9399999999999999,0.27000000000000002,3.2799999999999998,2.5699999999999998,3.8300000000000001,2.3999999999999999,4.0300000000000002,3.6299999999999999,3.1899999999999999,3.3900000000000001,2.5699999999999998,3.4700000000000002,4.2000000000000002,2.0899999999999999,3.6099999999999999,4.0300000000000002,2.3199999999999998,3.4900000000000002,5.3200000000000003,3.1299999999999999,4.9900000000000002,1.73,3.7000000000000002,1.79,3.02,4.04,3.1400000000000001,2.5600000000000001,2.3799999999999999,4.2999999999999998,2.0899999999999999,4.0899999999999999,3.52,1.8200000000000001,4.1799999999999997,3.3900000000000001,4.4299999999999997,2.9100000000000001,2.7799999999999998,3.4500000000000002,4.71,1.23,4.0199999999999996,1.71,3.1600000000000001,3.4500000000000002,2.21,5.4100000000000001,2.77,3.75,3.5800000000000001,4.96,2.3399999999999999,2.7400000000000002],"type":"violin","box":{"visible":true},"meanline":{"visible":true},"x0":"Años de membresía","line":{"color":"black","width":1},"marker":{"color":"yellow","line":{"color":"black","width":1}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+<div id="gráfico-3.-distribución-de-las-compras-del-año"
+class="section level3">
+<h3>Gráfico 3. Distribución de las compras del año</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<div class="plotly html-widget html-fill-item" id="htmlwidget-6118937b3e05a0fe415d" style="width:576px;height:460.8px;"></div>
+<script type="application/json" data-for="htmlwidget-6118937b3e05a0fe415d">{"x":{"visdat":{"22d41ab8177d":["function () ","plotlyVisDat"]},"cur_data":"22d41ab8177d","attrs":{"22d41ab8177d":{"alpha_stroke":1,"sizes":[10,100],"spans":[1,20],"y":{},"type":"violin","box":{"visible":true},"meanline":{"visible":true},"x0":"Valor compras año (COP)","color":["mediumslateblue"],"line":{"color":"black","width":1},"marker":{"color":"lightsteelblue","line":{"color":"black","width":1}},"inherit":true}},"layout":{"margin":{"b":40,"l":60,"t":25,"r":10},"plot_bgcolor":"rgb(229, 231, 233)","yaxis":{"domain":[0,1],"automargin":true,"title":"","zerolinecolor":"#ffff","zerolinewidth":2,"gridcolor":"ffff"},"xaxis":{"domain":[0,1],"automargin":true},"hovermode":"closest","showlegend":false},"source":"A","config":{"modeBarButtonsToAdd":["hoverclosest","hovercompare"],"showSendToCloud":false},"data":[{"fillcolor":"rgba(123,104,238,0.5)","y":[2351804,1568820,1950190,2327409,2397624,2548410,2086289,2199617,2280802,1708798,1970424,2089350,1634561,2293663,1881811,1847123,1831391,1630818,1809263,2420244,2138823,1679755,1746062,2077364,2803668,1692720,2479583,1947356,2118151,2218888,1990347,1790752,2354850,1964293,2029767,2087534,1391108,1962955,1912681,2151385,2131007,2007498,2364789,2188977,1792919,2199442,2375660,2254691,1918928,1665433,2902339,1770669,1538506,1805830,2089617,1934693,2083595,1812678,1986603,2189461,2467406,2028850,2454397,1932639,2161054,3062074,2214406,1877243,1634481,1806303,1779866,2383291,1672600,2139109,2312966,1914877,1777144,2179119,1955144,1903036,1959250,1851591,2385721,1353279,2134060,2147088,1949517,1894916,2188504,2020453,1796281,2444000,2063315,1756299,2056356,2173361,2084572,2458861,2029560,1981198,2072258,1560413,1682951,1968420,1640278,1990055,1978207,1513324,2281807,2196033,1837140,1971780,1699051,1689707,2568406,1653487,1916924,2372309,2026189,2285230,2305245,2307210,2056958,1980704,2057346,2164906,2067326,1873783,2193121,1726471,2211761,2293225,1810509,2170846,1631216,1929414,2116920,1732195,1904766,1759992,1795733,1891969,1855694,1400233,1840245,2023085,1853940,1918928,1696742,1863557,1707101,2736654,2223570,2628080,2383215,2015914,2344623,2976887,2051301,2112895,1875654,1430366,2145692,1960826,2200190,2053802,1991248,2315945,2026146,2006997,1687867,1759565,2664502,1195048,1860706,1495543,2130870,2219603,2151093,2004401,2068661,2230117,1974877,1808491,2309094,1943693,1702980,2148860,2098552,1915542,2449541,1907067,2020479,2183782,1736087,1698701,1410200,2651844,2242241,1870008,2019482,2362251,1775863,1569990,2274870,2849585,1653184,2248328,1648052,1874674,1986216,2194074,2144524,2233709,1431455,2116227,1549428,2115734,1683665,1987734,2077492,2365751,2009639,2417339,2220274,1026682,2188444,1847684,1833508,1745134,2131741,2050210,2521691,1854984,1972721,2004837,2007713,1505348,1685307,2155100,1592654,2285884,1806514,1962402,2367124,1636282,2253784,2590478,1793362,2075146,2094536,1575429,1704618,2013552,1930410,2099191,2298619,2298989,2641701,1501594,2560751,2056039,1505987,1938079,2458919,2269900,2216012,1599935,1916691,2343727,2163983,2512191,2329968,2563145,1785675,2282520,1693233,2466641,2121450,1769452,2047919,2241775,1901054,1497079,1854366,1886412,2504075,1729888,1426462,1869711,2012870,1513894,2336873,1806911,2230536,1730883,2025695,2040639,2350299,1129885,1895799,1959632,2167889,1064345,1978749,2759150,1550139,1767587,2419365,1208758,1918459,2024529,1279715,2113237,2440512,2336424,1865685,1619298,2259164,2386067,1474619,2169650,1913049,1893442,2236796,1788751,2020920,2229011,1689475,1780249,1768258,2132160,1696811,1994542,1322378,1773767,1914404,1760011,1431132,1904557,2004490,2370754,1944334,2304101,1770892,1847164,1953550,2372626,1571241,1772789,2141923,2133586,2128510,2235792,2035088,1615068,2562336,1846513,1529664,2247499,1778305,1604133,1537304,2111132,1928580,2377098,2008370,1630629,2835741,2127846,2084963,1789476,1540609,1722356,1674411,1915806,1935186,2155768,1944655,1540380,2111135,2188763,1642412,2335911,1898129,1659740,2203253,1835125,1630169,2325236,2186227,2012700,2196526,1931324,2230433,1939508,2679949,2190840,2151301,1632868,2652299,2025503,2113677,2528494,1953081,2034943,1644748,1636378,1871204,2048663,2433087,2356106,1776215,1972725,2130899,1103674,2044155,1753671,1902900,1934173,2655215,2177637,2520627,1844449,1967646,2297663,2123067,2327195,2225193,2008531,2224745,1900287,1947788,1736577,1216542,2284864,2332319,1782999,1571969,2263977,1996561,2042158,1234111,2246066,1693882,2052612,2116778,1257754,1914337,1778329,1900062,1746882,2084781,1912732,1729925,1753215,1555762,2139086,2151663,1631506,2475384,2011084,1589682,1569141,2756943,2172531,2310944,1746323,2215979,1709426,1698915,2164199,1877533,1778182,1970227,2141286,1635833,1950222,1950585,1608668,2204092,1989558,1978554,1916990,1850626,2062010,2305910,1431432,2390960,1309512,2041606,2042006,1615278,2510413,2042647,2295390,2116196,2206481,1825878,1991115],"type":"violin","box":{"visible":true},"meanline":{"visible":true},"x0":"Valor compras año (COP)","line":{"color":"black","width":1},"marker":{"color":"lightsteelblue","line":{"color":"black","width":1}},"xaxis":"x","yaxis":"y","frame":null}],"highlight":{"on":"plotly_click","persistent":false,"dynamic":false,"selectize":false,"opacityDim":0.20000000000000001,"selected":{"opacity":1},"debounce":0},"shinyEvents":["plotly_hover","plotly_click","plotly_selected","plotly_relayout","plotly_brushed","plotly_brushing","plotly_clickannotation","plotly_doubleclick","plotly_deselect","plotly_afterplot","plotly_sunburstclick"],"base_url":"https://plot.ly"},"evals":[],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<div id="correlaciones" class="section level1">
+<h1>Correlaciones</h1>
+<div id="gráfico-4.-correlograma" class="section level3">
+<h3>Gráfico 4. Correlograma</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<p><img src="index_files/figure-html/unnamed-chunk-9-1.png" width="576" data-figure-id=fig1 /></p>
+</div>
+<div id="interpretación-1" class="section level3">
+<h3>Interpretación</h3>
+<p>Hay una correlación positiva fuerte (0.809) entre el valor de la
+compras y los años de la membresía, es decir, que a medida que se
+incrementa los años de fidelización del comprador se incrementa su gasto
+anual.</p>
+<p>Por otra parte, existe una correlacion positiva moderada entre la
+duración promedio de la sesión y la duración de la sesión en la app con
+el gasto anual (0.499 y 0.355 respectivamente ).</p>
+</div>
+</div>
+<div id="estimadores" class="section level1">
+<h1>Estimadores</h1>
+<div id="estimadores-de-mínimos-cuadrados" class="section level3">
+<h3>Estimadores de mínimos cuadrados</h3>
+<div class="knitr-options" data-fig-width="576" data-fig-height="460">
+
+</div>
+<pre><code>                             [,1]
+colum_unos          -1.043719e-15
+min_promedio_sesion  3.220158e-01
+min_en_app           4.850864e-01
+min_en_web           5.519625e-03
+anos_miembro         7.759021e-01</code></pre>
+</div>
+<div id="interpretación-2" class="section level3">
+<h3>Interpretación</h3>
+<p>Teniendo en cuenta la tendencia lineal creciente entre los años de
+membresía y el valor de las compras, y la correlación fuerte entre esta
+dos variables (cor =0.809) (gráfico 4), era de esperarse que el
+estimador o coeficiente de regresión asociado a la variable años de
+membresía, sea la que contribuye en mayor medida a entender la
+variabilidad del gasto con un estimador igual a 7.756e-01, calculado
+bajo la normalización de las variables Z-score.</p>
+<p>Luego sigue en importancia la duración de la sesión en la app
+(estimador = 4.855e-01), por tener una asociación lineal moderada
+(0.499), la cual se confirma en el correlograma.</p>
+<p>Posteriomente, para predecir el comportamiento del gasto anual, es la
+duración promedio de navegación con un estimador igual a 3.220158e-01.
+Esto obedece a la observación de cierta tendencia creciente pero no tan
+marcada.</p>
+<p>La variable que no contribuye a entender la variabilidad del gasto es
+la duración de la sesión en el sitio web con un estimador de
+5.519625e-03. Lo cual se entiende porque su correlación con el gasto
+anual es 0.</p>
+</div>
+</div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+  // add bootstrap table styles to pandoc tables
+  $('tr.header').parent('thead').parent('table').addClass('table table-condensed table-sm');
+
+  // initialize mathjax
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src  = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML";
+  document.getElementsByTagName("head")[0].appendChild(script);
+
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  FlexDashboard.init({
+    fillPage: true,
+    orientation: "rows",
+    storyboard: false,
+    defaultFigWidth: 576,
+    defaultFigHeight: 460,
+    defaultFigWidthMobile: 360,
+    defaultFigHeightMobile: 460,
+    resize_reload: true
+  });
+  var navbar = $(".navbar").first();
+  var body = $("body").first();
+  var sidebar = $(".section.sidebar").first();
+  function addNavbarPadding() {
+    var navHeight = navbar.outerHeight();
+    body.css("padding-top", (navHeight + 8) + "px");
+    sidebar.css("top", navHeight + "px");
+    var resizeEvent = window.document.createEvent("UIEvents");
+    resizeEvent.initUIEvent("resize", true, false, window, 0);
+    window.dispatchEvent(resizeEvent);
+  }
+  if (!window.Shiny) setTimeout(addNavbarPadding, 100);
+  $(document).on("shiny:idle", function() {
+    setTimeout(addNavbarPadding, 50);
+  });
+});
+</script>
+
+</body>
+</html>
